@@ -19,7 +19,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }
     }
     `)
-    const ArticleTemplate = require.resolve("./src/components/news/ArticleTemplate.js")
+    const ArticleTemplate = require.resolve("./src/components/templates/news/ArticleTemplate.js")
    
     newsData.data.allContentfulNews.edges.forEach(edge => {
       createPage({

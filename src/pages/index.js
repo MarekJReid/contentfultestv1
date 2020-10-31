@@ -1,16 +1,7 @@
 import React from "react"
+import '../App.scss'
+import Landing from "../components/pages/landing/Landing"
 
-
-import Layout from "../components/layout"
-import NewsLandingPage from "../components/news/NewsLandingPage"
-
-
-const IndexPage = () => (
-  <Layout>
-   <NewsLandingPage />
-  </Layout>
-)
+const IndexPage = () => <Landing />
 
 export default IndexPage
-
-

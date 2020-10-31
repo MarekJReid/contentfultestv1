@@ -20,9 +20,12 @@ function NewsLandingPage() {
         }
       }
   `)
-    console.log(data.allContentfulNews.edges[0].node.newsTitle)
+    console.log()
     return (
-        <div>meehehe news page landing</div>
+        <div>{data.allContentfulNews.edges[0].node.newsTitle}
+
+
+        </div>
     )
 }
 
