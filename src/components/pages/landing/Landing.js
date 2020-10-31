@@ -4,7 +4,7 @@ import Hero from "./hero/Hero"
 import BoxPicLeft from '../../templates/slidinboxes/BoxPicLeft'
 import BoxPicRight from '../../templates/slidinboxes/BoxPicRight'
 import MailChimpSignUpForm from '../../templates/mailchimp-signup/MailChimpSignUpForm'
-import Footer from "../../Footer"
+import Footer from "../../footer"
 function Landing() {
   return (
     <div>
