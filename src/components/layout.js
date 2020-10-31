@@ -14,18 +14,22 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  query MyQuery {
+    allContentfulNews {
+      edges {
+        node {
+          newsTitle
         }
       }
     }
+  }
   `)
+
+console.log(data.allContentfulNews.edges[0].node.newsTitle)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header  />
       <div
         style={{
           margin: `0 auto`,
@@ -33,6 +37,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        I am a {data.allContentfulNews.edges[0].node.newsTitle} in page
         <main>{children}</main>
         <footer style={{
           marginTop: `2rem`
