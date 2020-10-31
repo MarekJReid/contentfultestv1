@@ -3,7 +3,7 @@ import React from "react"
 import Hero from "./hero/Hero"
 import BoxPicLeft from '../../templates/slidinboxes/BoxPicLeft'
 import BoxPicRight from '../../templates/slidinboxes/BoxPicRight'
-import MailChimpSignUpForm from '../../templates/mailchimp-singup/MailChimpSignUpForm'
+import MailChimpSignUpForm from '../../templates/mailchimp-signup/MailChimpSignUpForm'
 import Footer from "../../Footer"
 function Landing() {
   return (
