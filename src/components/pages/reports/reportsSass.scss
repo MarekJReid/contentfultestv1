@@ -1,0 +1,109 @@
+.reports-constainer {
+    height: 100%;
+    width: 80%;
+  
+    display: flex;
+  
+    justify-items: center;
+    flex-flow: row wrap;
+    .reports-intro-box {
+  
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+      padding: 3rem 1rem 0rem 1rem;
+      .reports-title {
+        h1 {
+          margin: .2rem;
+          padding: 0 0 .25rem 0;
+        }
+      }
+      .reports-subtitle {
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .reports-para {
+        width: 80%;
+        padding-bottom: 1rem;
+      }
+    }
+    .reports-grid {
+      padding: 0 2rem;
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+  
+      .reports-card {
+       height: 86%;
+        width: 100%;
+       
+        margin: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+        -webkit-box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
+        -moz-box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
+        box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
+        border-radius: 10px 10px 10px 10px;
+        -moz-border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        
+        .reports-card-pic {
+          
+          width: 40%;
+          max-height: 100%;
+          img {
+            height: 100%;
+              border-radius: 10px 2px 1px 10px;
+          -moz-border-radius: 10px 1px 1px 10px ;
+          -webkit-border-radius: 10px 1px 1px 10px ;
+            min-width: 100%;
+            height: 100%;
+          }
+  
+          background: paleturquoise;
+        }
+        .reports-card-text {
+          width: 45%;
+          /* height: 100%; */
+          padding: 2rem;
+          color: #535353;
+          display: flex;
+          flex-flow: column;
+          .seperating-line {
+            border-bottom: 1px solid black;
+          }
+          .reports-card-subtitle {
+            margin: 0;
+            h3 {
+              margin-bottom: 0.25rem;
+              font-weight: 900;
+            }
+          }
+          .reports-card-author-info {
+            // font-size: -50%;
+            font-weight: 200;
+            color: grey;
+            font-style: italic;
+            padding-bottom: 1rem;
+          }
+          .reports-intro {
+            padding-bottom: 1rem;
+          }
+        }
+      
+      }
+      .btn-big .button-report-card {
+        padding: 0;
+      }
+      .load-more-cards {
+          border-radius: 3px;
+         height: 1rem;
+          padding: 1rem;
+          background: rgb(151, 100, 66);
+      }
+    }
+  }
+  
+  

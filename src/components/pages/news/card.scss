@@ -1,0 +1,105 @@
+
+ .news-grid {
+    
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+.news-card {
+      width: 23rem;
+      margin: 1rem;
+      display: flex;
+      overflow: hidden;
+      flex-flow: row wrap;
+      box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+      align-content: flex-start;
+      transition: translate 2s ease-in;
+      &:hover {
+        translate: scale(1.1) ;
+        transition: 2s ease;
+      }
+      .news-card-pic {
+        border-radius: 10px 10px 1px 1px;
+        -moz-border-radius: 10px 10px 1px 1px;
+        -webkit-border-radius: 10px 10px 1px 1px;
+        width: 100%;
+        height: 40%;
+        img {
+          border-radius: 10px 10px 1px 1px;
+          -moz-border-radius: 10px 10px 1px 1px;
+          -webkit-border-radius: 10px 10px 1px 1px;
+          min-width: 100%;
+          height: 100%;
+        }
+        &:hover {
+          transform: scale(1.05);
+          color: white;
+        }
+
+        background: paleturquoise;
+      }
+      .news-card-text {
+        width: 100%;
+        padding: 1rem;
+        color: rgb(83, 83, 83);
+        .seperating-line {
+          border-bottom: 1px solid black;
+        }
+        .news-card-subtitle {
+          margin: 0;
+          h3 {
+            margin-bottom: 0.25rem;
+            font-weight: 900;
+          }
+        }
+        .news-card-author-info {
+          font-size: -50%;
+          font-weight: 200;
+          color: grey;
+          font-style: italic;
+          padding-bottom: 1rem;
+        }
+        .news-intro {
+          padding-bottom: 2rem;
+        }
+      }
+      .news-card-button-box {
+        display: flex;
+        width: 100%;
+        flex-flow: row;
+        justify-content: center;
+        .news-card-button {
+          padding: 1rem 3rem;
+          border-radius: 3px;
+          border: 3px solid #0d6989;
+          background: rgb(255, 255, 255);
+          display: flex;
+          font-size: 110%;;
+          justify-content: center;
+          align-items: center;
+          font-size: 110%;
+          transition: all .3s ease;
+          p {
+            // width: 100%;
+            text-align: center;
+            &:hover {
+              
+                color: white;
+              
+            }
+          }
+          
+        }
+        &:hover {
+          background: #0d6989;
+          
+          translate: scale(1.0) translateY(2px)
+          
+        }
+      }
+    }
+   
+}

@@ -23,7 +23,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
    
     newsData.data.allContentfulNews.edges.forEach(edge => {
       createPage({
-        path: `${edge.node.slug}/`,
+        path: `/news/${edge.node.slug}/`,
         component: ArticleTemplate,
         context: {
           author: edge.node.author,

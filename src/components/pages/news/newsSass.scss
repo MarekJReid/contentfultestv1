@@ -1,0 +1,102 @@
+.news-constainer {
+  height: 100%;
+
+
+  display: flex;
+
+  justify-items: center;
+  flex-flow: row wrap;
+  .news-intro-box {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 3rem 1rem 0rem 3rem;
+    .news-title {
+      h1 {
+        margin: 0.2rem;
+        padding: 0;
+      }
+    }
+    .news-subtitle {
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .news-para {
+      width: 80%;
+      padding-bottom: 1rem;
+    }
+  }
+  .news-grid {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    .news-card {
+      width: 23rem;
+      margin: 1rem;
+      display: flex;
+      flex-flow: row wrap;
+      box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+      align-content: flex-start;
+
+      .news-card-pic {
+        border-radius: 10px 10px 1px 1px;
+        -moz-border-radius: 10px 10px 1px 1px;
+        -webkit-border-radius: 10px 10px 1px 1px;
+        width: 100%;
+        height: 40%;
+        img {
+          border-radius: 10px 10px 1px 1px;
+          -moz-border-radius: 10px 10px 1px 1px;
+          -webkit-border-radius: 10px 10px 1px 1px;
+          min-width: 100%;
+          height: 100%;
+        }
+
+        background: paleturquoise;
+      }
+      .news-card-text {
+        width: 100%;
+        padding: 1rem;
+        color: rgb(83, 83, 83);
+        .seperating-line {
+          border-bottom: 1px solid black;
+        }
+        .news-card-subtitle {
+          margin: 0;
+          h3 {
+            margin-bottom: 0.25rem;
+            font-weight: 900;
+          }
+        }
+        .news-card-author-info {
+          font-size: -50%;
+          font-weight: 200;
+          color: grey;
+          font-style: italic;
+          padding-bottom: 1rem;
+        }
+        .news-intro {
+          padding-bottom: 2rem;
+        }
+        .button-box {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      
+    }
+  }
+    
+}
+
+.news-article-container {
+  margin: 17vh 20% 20rem 20%;
+}
+  
