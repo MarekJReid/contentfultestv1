@@ -15,6 +15,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      },
+    },
     {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/about/*`] },

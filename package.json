@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-source-contentful": "^3.0.6",
     "gatsby-source-filesystem": "^2.3.37",
+    "gatsby-transformer-json": "^2.4.15",
     "gatsby-transformer-sharp": "^2.5.20",
     "gsap": "^3.5.1",
     "node-sass": "^4.9.4",

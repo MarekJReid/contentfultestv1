@@ -34,6 +34,40 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         },
       })
     })
+
+    // Partners Pages
+    const data = await graphql(`
+    query MyQuery {
+      allCountriesJson {
+        edges {
+          node {
+            country
+            institution {
+              name
+              about
+            }
+            intro
+            findings
+          }
+        }
+      }
+    }
+  `)
+  const Country = require.resolve("./src/components/templates/partners/Country.js")
+
+  data.data.allCountriesJson.edges.forEach(edge => {
+    createPage({
+      path: `/partners/${edge.node.country}/`,
+      component: Country,
+      context: {
+        country: edge.node.country,
+        intro: edge.node.intro,
+        institutionName: edge.node.institution.name,
+        institutionAbout: edge.node.institution.about,
+        findings: edge.node.findings,
+      },
+    })
+  })
   }
   
   
