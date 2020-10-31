@@ -1,0 +1,239 @@
+a p {
+  all: unset;
+}
+a {
+  text-decoration: none; /* no underline */
+}
+.about-page {
+  margin-top: 6.5rem;
+  height: 90vh;
+
+  .about-page-nav {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      li {
+        margin: 0;
+        padding: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+        span {
+          padding: 1rem;
+        }
+        &:hover {
+          text-decoration: none;
+          transform: scale(1.2);
+          transition: all 0.4s ease-in;
+          padding: 1rem 1.5rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+  .about-page-display-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.intro {
+  height: 87vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .slider-box {
+    height: 100%;
+    width: 100%;
+    background: rgb(230, 204, 140);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    .intro-box {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .intro-box-picture {
+        min-width: 60%;
+        background: darkcyan;
+      }
+      .intro-box-text-container {
+        border: 1px black solid;
+        width: 40%;
+        height: 100%;
+      }
+    }
+  }
+  .next-button {
+    background: darkorange;
+    padding: 1rem;
+    display: flex;
+    justify-self: flex-end;
+  }
+}
+
+.concept-page {
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .concept-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    .concept-container-pic {
+      overflow: hidden;
+      width: 60%;
+      height: 60vh;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      z-index: -1;
+    }
+    .concept-container-text {
+      width: 40%;
+      height: 50vh;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .concept-container-button-box {
+      width: 45%;
+      opacity: 0;
+      .concept-container-buttons-right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .concept-container-buttons-left {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.textBox {
+  h1 {
+    margin-left: -3rem;
+    display: inline;
+    background: white;
+    padding: 1rem;
+  }
+
+  h3 {
+    margin: 0;
+    margin-left: -1rem;
+    background: white;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .titles-right {
+    text-align: right;
+    h1 {
+      margin-right: -3rem;
+
+      display: flex;
+      z-index: 1;
+      display: inline;
+      background: white;
+      padding: 1rem;
+    }
+
+    h3 {
+      margin: 0;
+      margin-left: -1rem;
+      background: white;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .text-box-body {
+    padding: 0 1.5rem;
+  }
+}
+
+.photo-box-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+// author page
+
+.author-page {
+  overflow: hidden;
+  min-height: 85vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .author-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    .author-container-pic {
+      overflow: hidden;
+      width: 50%;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      z-index: -1;
+      img {
+        max-height: 155%;
+        max-width: 100%;
+        opacity: 0;
+      }
+    }
+    .author-container-text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h1 {
+        padding: 1rem;
+        background: white;
+        margin: 0 0 0 -5rem;
+        opacity: 0;
+        z-index: -1;
+      }
+
+      .qauls {
+        background: white;
+        padding: 0.25rem;
+        padding: 0.5rem 1rem;
+        margin: -1rem 0 0 -2rem;
+        font-style: italic;
+        opacity: 0;
+        z-index: 1;
+      }
+      p {
+        font-style: normal;
+        margin: 0;
+        padding: 0.25rem 1rem;
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.form-container {
+  text-align: center;
+  margin-bottom: 15rem;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    
+    & > input {
+      flex: 1 1 10ch;
+      margin: .5rem;
+      
+      &[type="email"] {
+        flex: 3 1 30ch;
+      }
+    }
+  }
+  
+  input {
+    border: none;
+    background: lightgrey;
+    border-radius: .25rem;
+    padding: 1.5rem 1rem;
+    font-size: 110%;
+    
+    &[type="submit"] {
+      background: #0d6989;
+      color: white;
+      font-weight: bold;
+      font-size: 130%;
+      box-shadow: 0 .75rem .5rem -.5rem lightgray;
+      transition: all 0.5s ease-in-out;
+    } &:hover {
+      transform: scale(1.02); padding: 1.5rem;
+    }
+  }
+  &::placeholder {
+    color: transparent;
+  }
+  }
