@@ -1,18 +1,18 @@
 import React, { useRef } from "react"
 import { Link } from "gatsby"
-// import Header from "../../../header"
-// import { nav2trans, heroBoxTrans } from "../../../animations/animations"
+
+import { nav2trans, heroBoxTrans } from "../../../animation/animations"
 
 function Hero() {
   let heroBox = useRef(null)
     let header = useRef(null)
-  //   let heroTextBoxTexth3 = useRef(null)
-  //   let heroTextBoxText = useRef(null)
+    let heroTextBoxTexth3 = useRef(null)
+    let heroTextBoxText = useRef(null)
 
-  //   useEffect(() => {
-  //     heroBoxTrans(heroBox, heroTextBoxText, heroTextBoxTexth3)
-  //     nav2trans(header, heroBox)
-  //   }, [])
+    useEffect(() => {
+      heroBoxTrans(heroBox, heroTextBoxText, heroTextBoxTexth3)
+      nav2trans(header, heroBox)
+    }, [])
 
   return (
     <div className="box-hero" ref={el => (heroBox = el)}>
@@ -62,7 +62,7 @@ function Hero() {
           </ul>
         </div>
       </div>
-      {/* 
+      
       <div className="animation-box">
         <div className="animation-text-box">
           <h1 ref={el => (heroTextBoxText = el)}>
@@ -73,7 +73,7 @@ function Hero() {
           </h3>
         </div>
       </div>
-       */}
+      
     </div>
   )
 }
