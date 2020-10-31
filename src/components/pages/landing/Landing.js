@@ -1,9 +1,10 @@
 import React from 'react'
 import '../../../../src/App.scss'
 import Hero from './hero/Hero'
+import Footer from '../../Footer'
 function Landing() {
     return (
-        <div>I am the landing page
+        <div>
              <Hero />
 
            
@@ -18,9 +19,10 @@ function Landing() {
             <BoxPicLeft boxId="2"/>
             <MailChimpSignUpForm />
             </div>
-                        
-            <Footer /> */}
+                      */}  
+             
         </div>
+        <Footer />
         </div>
     )
 }

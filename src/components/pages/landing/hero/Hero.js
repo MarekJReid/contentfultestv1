@@ -16,7 +16,7 @@ function Hero() {
 
   return (
     <div className="box-hero" ref={el => (heroBox = el)}>
-      I am the hero page
+  
       <div className="nav-box" ref={el => (header = el)}>
         <Link to="/">
           <div className="nav-title">

@@ -22,7 +22,6 @@ body {
   margin: auto 0;
   box-sizing: border-box;
   color: $text;
-  background: blue;
 }
 
 h1,
@@ -32,6 +31,14 @@ h4,
 h5 {
   font-family: GothamPro;
   color: $blue;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
 }
 
 p,
@@ -199,7 +206,7 @@ span {
 
   flex-flow: column wrap;
   height: 100vh;
-  background-image: url("../src/images/bgFeatures.jpeg");
+  // background-image: url("../src/images/bgFeatures.jpeg");
   background-size: cover;
   opacity: 0;
 
