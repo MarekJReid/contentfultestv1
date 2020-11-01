@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import "../App.scss"
-import img from '../images/thankyou-landing.jpg'
+// import img from '../images/thankyou-landing.jpg'
 function ThankYou({location}) {
-console.log(location.state)
- 
 
+if (location.state) {console.log(location.state)}
   return (
     <Layout>
       <div className="thankyou-page">
