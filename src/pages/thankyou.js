@@ -9,7 +9,7 @@ console.log(location.state)
   return (
     <Layout>
       <div className="thankyou-page">
-        <div className="thankyou-container">
+        {/* <div className="thankyou-container">
           <div className="pic-container">
             <img src={img} alt=""/>
           </div>
@@ -32,7 +32,7 @@ console.log(location.state)
             ) :  <h3>We will get back to you as soon as possible.</h3>}
            
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   )
