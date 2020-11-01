@@ -6,25 +6,44 @@ a {
 }
 .about-page {
   margin-top: 6.5rem;
-  height: 90vh;
-
+  
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    margin-top: 3rem;
+    }
   .about-page-nav {
     height: 100%;
     width: 20%;
     display: flex;
-    flex-direction: column;
+    
+    @media (max-width: 600px) {
+      width: 100%;
+    
+    }
 
     ul {
       margin-top: 5rem;
       display: flex;
       flex-direction: column;
+      @media (max-width: 600px) {
+        padding: .2rem;
+        justify-content: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+      
+       }
       li {
         margin: 0;
         padding: 1rem;
         display: inline-block;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
-
+        @media (max-width: 600px) {
+          padding: 0;
+        }
         span {
           padding: 1rem;
         }
@@ -41,8 +60,13 @@ a {
   .about-page-display-container {
     width: 80%;
     display: flex;
-    flex-direction: column;
-  }
+    flex-direction: column; 
+    min-height: 90vh;
+    @media (max-width: 600px) {
+      width: 100%
+    }
+    
+    
 }
 .intro {
   height: 87vh;
@@ -84,15 +108,16 @@ a {
 .concept-page {
   overflow: hidden;
   min-height: 85vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+ 
   .concept-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 90%;
+    @media (max-width: 600px) {
+      width: 100%;}
+    
     .concept-container-pic {
       overflow: hidden;
       width: 60%;
@@ -101,18 +126,68 @@ a {
       display: flex;
       align-items: center;
       z-index: -1;
+      
+      @media (max-width: 600px) {
+    width: 100%;
+    align-self: flex-start;
+    order: 3;
+    height: 100%;
+    
     }
+  }
     .concept-container-text {
       width: 40%;
       height: 50vh;
       opacity: 0;
       display: flex;
       align-items: center;
+      
+      @media (max-width: 600px) {
+        width: 100%;
+        order: 1;
+        height: 100%;
+        }
+    }
+
+    .concept-container-pic-right {
+      overflow: hidden;
+      width: 40%;
+      height: 60vh;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      z-index: -1;
+      order: 1;
+      
+      @media (max-width: 600px) {
+    width: 100%;
+    align-self: flex-start;
+    order: 3;
+    height: 100%;
+    
+    }
+  }
+    .concept-container-text-right {
+      width: 40%;
+      height: 50vh;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      
+      @media (max-width: 600px) {
+        width: 100%;
+        order: 1;
+        height: 100%;
+        }
     }
 
     .concept-container-button-box {
       width: 45%;
       opacity: 0;
+      order: 2;
+      @media (max-width: 600px) {
+        margin-bottom: 1rem;;
+        }
       .concept-container-buttons-right {
         width: 100%;
         display: flex;
@@ -133,6 +208,9 @@ a {
     display: inline;
     background: white;
     padding: 1rem;
+    @media (max-width: 600px) {
+   margin-left: 0;
+    }
   }
 
   h3 {
@@ -140,6 +218,9 @@ a {
     margin-left: -1rem;
     background: white;
     padding: 0.25rem 0.5rem;
+    @media (max-width: 600px) {
+      margin-left: 0;
+       }
   }
 
   .titles-right {
@@ -152,6 +233,9 @@ a {
       display: inline;
       background: white;
       padding: 1rem;
+      @media (max-width: 600px) {
+        margin-left: 0;
+         }
     }
 
     h3 {
@@ -159,6 +243,9 @@ a {
       margin-left: -1rem;
       background: white;
       padding: 0.25rem 0.5rem;
+      @media (max-width: 600px) {
+        margin-left: 0;
+         }
     }
   }
 
@@ -193,6 +280,13 @@ a {
     justify-content: center;
     align-items: center;
     width: 90%;
+
+    @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+       }
+  
+
     .author-container-pic {
       overflow: hidden;
       width: 50%;
@@ -200,23 +294,41 @@ a {
       display: flex;
       align-items: center;
       z-index: -1;
+      @media (max-width: 600px) {
+        width: 100%;
+           }
       img {
         max-height: 155%;
         max-width: 100%;
         opacity: 0;
       }
+      @media (max-width: 600px) {
+        min-height: 185%;
+        min-width: 100%;
+        justify-content: space-evenly
+           }
     }
     .author-container-text {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      margin-bottom: 5rem;
+      @media (max-width: 600px) {
+    width: 100%;
+   
+
+       
+           }
       h1 {
         padding: 1rem;
         background: white;
         margin: 0 0 0 -5rem;
         opacity: 0;
         z-index: -1;
+        @media (max-width: 600px) {
+        margin: -2rem 0 0 0;
+             }
       }
 
       .qauls {
@@ -227,6 +339,9 @@ a {
         font-style: italic;
         opacity: 0;
         z-index: 1;
+        @media (max-width: 600px) {
+          margin: 0;
+             }
       }
       p {
         font-style: normal;
@@ -236,4 +351,5 @@ a {
       }
     }
   }
+}
 }

@@ -5,11 +5,10 @@ import AboutDisplayContainer from "./AboutDisplayContainer"
 import "../about.scss"
 function AboutLanding() {
   return (
-    <div className="about-page">
+    
       <Layout>
-        <main
-          style={{ display: `flex`, height: `100%`}}
-        >
+    
+        <div className="about-page">
           <nav className="about-page-nav">
             <ul>
               <li><Link to="/about">  <span> Introduction</span> </Link></li>
@@ -19,9 +18,11 @@ function AboutLanding() {
             </ul>  
           </nav>
           <AboutDisplayContainer />
-        </main>
+          </div>
+        
+        
       </Layout>
-    </div>
+    
   )
 }
 

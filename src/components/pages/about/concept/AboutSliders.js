@@ -8,8 +8,9 @@ import PhotoBox from "./PhotoBox"
 
 let tl = new TimelineLite()
 
+
 function AboutSliders({ contentRight, startNum }) {
-  const [buttons, setButtons] = useState(contentRight)
+  const [buttons, setButtons] = useState(false)
   const [boxNum, setBoxNum] = useState(0)
 
   let picBox = useRef(null)
@@ -19,7 +20,7 @@ function AboutSliders({ contentRight, startNum }) {
   useEffect(() => {
     TweenLite.to([picBox, textBox, subNavButtons], 1, {
       autoAlpha: 1,
-      delay: 0.1,
+    
     })
   })
 
@@ -27,22 +28,22 @@ function AboutSliders({ contentRight, startNum }) {
     tl.to([picBox, textBox, subNavButtons], 1, { opacity: 0 })
 
     if (buttons) {
-      tl.to(picBox, 0, { width: "40%" })
-        .to(textBox, 0.1, { width: "60%" })
+      tl
         .fromTo(
           [textBox],
           1,
-          { autoAlpha: 0, x: 100 },
-          { autoAlpha: 1, x: 0, justifyContent: "flex-end" }
+          { autoAlpha: 0, },
+          { autoAlpha: 1, justifyContent: "flex-end", }
         )
         .fromTo(
           [picBox],
           1,
-          { autoAlpha: 0, x: -100 },
+          { autoAlpha: 0},
           {
             autoAlpha: 1,
-            x: 0,
+         
             justifyContent: "flex-end",
+             delay: 2
           }
         )
 
@@ -51,10 +52,9 @@ function AboutSliders({ contentRight, startNum }) {
       }, 1100)
       tl.to(subNavButtons, 1, { autoAlpha: 1 })
     } else {
-      tl.to(picBox, 0, { width: "60%" })
-        .to(textBox, 0.1, { width: "40%" })
-        .fromTo([picBox], 1, { autoAlpha: 0, x: -100 }, { autoAlpha: 1, x: 0 })
-        .fromTo([textBox], 1, { autoAlpha: 0, x: 100 }, { autoAlpha: 1, x: 0 })
+      tl
+        .fromTo([picBox], 1, { autoAlpha: 0,}, { autoAlpha: 1, })
+        .fromTo([textBox], 1, { autoAlpha: 0,  }, { autoAlpha: 1, })
 
       setTimeout(() => {
         setButtons(!buttons)
@@ -94,7 +94,7 @@ function AboutSliders({ contentRight, startNum }) {
           </div>
 
           <div
-            class={buttons ? "concept-container-text" : "concept-container-pic"}
+            class={buttons ? "concept-container-text-right" : "concept-container-pic-right"}
             ref={el => (textBox = el)}
           >
             {buttons ? (
