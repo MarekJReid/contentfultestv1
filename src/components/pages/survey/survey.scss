@@ -9,10 +9,10 @@
     transform: scale(1.005);
   }
   .survey-page-image {
-   
+   height: 38vh;
     img {
       width: 100%;
-      height: 110%;
+      height: 100%;
       
     }
   }
@@ -38,6 +38,18 @@
           background: white;
           display: inline;
           padding: 0.5rem 1rem;
+          
+        }
+
+        h1 span .heading-left {
+          @media (max-width: 600px) {
+          padding-right: 1rem;
+          }
+        }
+        h1 span .heading-right {
+          @media (max-width: 600px) {
+          padding-left: 1rem;
+          }
         }
       }
       .survey-page-intro-box-para {

@@ -30,7 +30,7 @@ function Survey() {
           
           <div className="survey-page-intro-box" ref={(el) => (textBox = el)}>
             <div className="survey-page-intro-box-heading">
-              <h1>Welcome to the Hope Barometer Survey</h1>
+              <h1> <span className="heading-right"> Welcome to the Hope </span> <span  className="heading-left" > Barometer Survey</span> </h1>
             </div>
             <div className="survey-page-intro-box-para">
               <p>
