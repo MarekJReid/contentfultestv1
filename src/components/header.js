@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
+import { TweenLite } from "gsap"
+
+
 
 import {
   clickMobileNavMenu,
-  clickMobNavClose,  
-  navPageLoad,
+  clickMobNavClose
 } from "../components/animation/animations"
 
 function Header() {
@@ -14,11 +16,7 @@ function Header() {
   let mobNavMenu = useRef(null)
   let mobNavMenuLinks = useRef(null)
   let mobNavMenuClose = useRef(null)
-
-  useEffect(() => {
-    navPageLoad(navbar)
-    // nav2trans(navbar)
-  }, [])
+  let header = useRef(null)
 
   const cclickMobileNavMenu = () => {
     setMobileNavMenu(!mobileNavMenu)
@@ -33,49 +31,99 @@ function Header() {
   }
 
   return (
-    <div style={{ margin: `0` }}>
+    <div class="">
       {/* Mobile Nav */}
       <div className="mobile-nav-box">
-        <div className="mobile-menu-icon" onClick={cclickMobileNavMenu}>
+        <h1 style={{ color: `yellow` }}>The Hope Barometer</h1>
+        <div className="" onClick={cclickMobileNavMenu}>
+          <div class="">
+            <div 
+            style={{
+              color: `yellow`, fontSize:`300%`, marginTop: `-.42rem`, paddingRight: `1.5rem`
+            }}
+            > = </div>
+          </div>
           <div className="mobile-menu" ref={el => (mobNavMenu = el)}>
-            <div className="title"></div>
+          
+              <Link to="/" 
+              >
+                <div className="nav-title">
+                <h5 style={{color: `yellow`, fontSize: `300%`, marginTop: `.2rem`, marginBottom: `-.5rem`, paddingLeft: `.5rem`, paddingTop: `.5rem`}}>The Hope</h5> 
+                <h5 style={{color: `yellow`, fontSize: `300%`, margin: `0`, paddingLeft: `7rem`}}>Barometer</h5> 
+                </div>
+              </Link>
+         
             <div
               className="close-icon"
               onKeyDown={cclickMobNavClose}
-                onClick={cclickMobNavClose}
+              onClick={cclickMobNavClose}
               ref={el => (mobNavMenuClose = el)}
-            ></div>
+            >   <div 
+            style={{
+              color: `yellow`, fontSize:`300%`, paddingRight: `1.5rem`
+            }}
+            > x </div></div>
             <div className="links-box">
               <ul ref={el => (mobNavMenuLinks = el)}>
-                <li onKeyDown={cclickMobNavClose}  onClick={cclickMobNavClose}>
-                  {" "}
-                  <Link to="/about">
-                    <p>About</p>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                  <Link to="/about"
+                  >
+                    <p
+                     style={{color: `yellow`}}
+                    >About</p>
                   </Link>
                 </li>
 
-                <li onKeyDown={cclickMobNavClose}  onClick={cclickMobNavClose}>Story</li>
-                <li onKeyDown={cclickMobNavClose}  onClick={cclickMobNavClose}>Blog</li>
-                <li onKeyDown={cclickMobNavClose}  onClick={cclickMobNavClose}>Store</li>
-                <li onKeyDown={cclickMobNavClose}  onClick={cclickMobNavClose}>Contact</li>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                <Link to="/survey"
+                  >
+                    <p
+                     style={{color: `yellow`}}
+                    >Survey</p>
+                  </Link>
+                </li>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                <Link to="/news"
+                  >
+                    <p
+                     style={{color: `yellow`}}
+                    >News</p>
+                  </Link>
+                </li>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                <Link to="/partners"
+                  >
+                    <p
+                     style={{color: `yellow`}}
+                    >Partners</p>
+                  </Link>
+                </li>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                <Link to="/contact"
+                  >
+                    <p
+                     style={{color: `yellow`}}
+                    >Contact</p>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="nav-box" ref={el => (navbar = el)}>
-        <Link to="/">
+      <div className="nav-box" ref={el => (header = el)}>
+       
+       <div class="home-link">
+       <Link to="/">
           <div className="nav-title">
             <span className="">The H</span>
-            <span
-            className="nav-title-o"
-            >o</span>
-            
-            <span>
-            pe Barometer</span>
+            <span className="nav-title-o">o</span>
+
+            <span>pe Barometer</span>
           </div>
         </Link>
+        </div>
         <div className="nav-links">
           <ul>
             <li></li>

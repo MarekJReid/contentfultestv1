@@ -13,20 +13,20 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
       nodeClose,
       1,
       { autoAlpha: 0 },
-      { autoAlpha: 1, delay: 0.2 }
+      { autoAlpha: 1, delay: 0.5 }
     );
     TweenMax.fromTo(
       nodeLinks,
       1,
       {
-        top: "15%",
-        left: "0%",
-        translate: "transform(-50%, -50%)",
+       top: "100%",
+
+
         opacity: 0,
       },
       {
-        top: "15%",
-        left: "14%",
+        top: "18%",
+        left: "5%",
         translate: "transform(-50%, -50%)",
         opacity: 1,
         delay: 0.95,
@@ -38,7 +38,7 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 };
 
 export const clickMobNavClose = (node, nodeClose, nodeLinks) => {
-  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0, delay: 0.1 });
+  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0, spin: 180});
   TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0 });
   TweenMax.to(node, 1, { width: 0 }, 1);
 };
