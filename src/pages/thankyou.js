@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import "../App.scss"
 import img from '../images/thankyou-landing.jpg'
 function ThankYou({location}) {
- let came = location.state.submissionFrom
+console.log(location.state)
  
 
   return (
