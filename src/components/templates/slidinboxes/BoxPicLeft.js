@@ -34,13 +34,7 @@ const BoxPicLeft = boxId => {
   let img = id + 1
 
   return (
-    <div
-      style={{
-        display: `flex`,
-        flexDirection: `column`,
-        height: `100vh`,
-      }}
-    >
+ 
       <div className={`${boxCss}`}>
         <div className={`${boxCss}-pic`}>
           <img
@@ -58,7 +52,7 @@ const BoxPicLeft = boxId => {
           </div>
         </div>
       </div>
-    </div>
+
   )
 }
 

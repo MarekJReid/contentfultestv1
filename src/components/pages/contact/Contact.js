@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Link} from 'gatsby'
 import "./contact.scss"
 function ContactPage() {
-  const [name, setName] = useState("George")
+  const [name, setName] = useState()
   return (
     <div className="contact-page">
       <div className="contact-intro">

@@ -4,15 +4,15 @@ import "../App.scss"
 import img from '../images/thankyou-landing.jpg'
 function ThankYou({location}) {
 
-  
+  let name
+  let type
 
 
 if (location.state) {
   name = location.state.name
  type = location.state.type
  }
- let name
- let type
+
 
  console.log(name)
 
@@ -25,7 +25,7 @@ if (location.state) {
           </div>
           <div class="text-container">
             <h1>
-            {type != "enquiry" ? (
+            {type !== "enquiry" ? (
               <h3>Thank you very much for subscribing to our mailing list {name} ! </h3>
             )
           :
@@ -34,7 +34,7 @@ if (location.state) {
           )
           }
             </h1>
-            {type != "enquiry" ? (<h3>
+            {type !== "enquiry" ? (<h3>
             You will be notified with all of the latest news and releases
             as soon as they come to light.
           </h3>

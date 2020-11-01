@@ -3,7 +3,7 @@ import { TweenLite } from 'gsap'
 import {Link} from 'gatsby'
 import "./mailchimp-modal.scss"
 function MailChimpSignUpForm() {
-  const [name, setName] = useState("George")
+  const [name, setName] = useState()
   let form = useRef(null)
 
   useEffect(() => {

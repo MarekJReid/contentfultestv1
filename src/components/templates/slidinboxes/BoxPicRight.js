@@ -29,7 +29,7 @@ const BoxPicRight = boxId => {
   useEffect(() => {
     picRightSidePicBox(picBox, picBox)
     picRightSideTextBox(textBox, picBox)
-    picRightSideTextBoxText(textBoxText, textBox)
+    picRightSideTextBoxText(textBoxText, picBox)
   })
   let img = id + 1
   return (

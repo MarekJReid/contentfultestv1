@@ -233,7 +233,7 @@ export const picRightSideTextBoxText = (node, trigger) => {
           scrollTrigger: {
             id: "id",
             trigger: trigger,
-            start: "top top",
+            start: "bottom bottom",
             toggleActions: "play none none reverse",
             // markers: true,
           },
