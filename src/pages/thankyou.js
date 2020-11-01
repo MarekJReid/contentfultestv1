@@ -3,8 +3,8 @@ import Layout from "../components/layout"
 import "../App.scss"
 import img from '../images/thankyou-landing.jpg'
 function ThankYou({location}) {
- let type = location.state.type
- let name = location.state.name
+ let came = location.state.submissionFrom
+ 
 
   return (
     <Layout>
@@ -15,7 +15,7 @@ function ThankYou({location}) {
           </div>
           <div class="text-container">
             <h1>
-            {type != "enquiry" ? (
+            {came != "enquiry" ? (
               <h3>Thank you very much for subscribing to our mailing list {name} ! </h3>
             )
           :
@@ -24,7 +24,7 @@ function ThankYou({location}) {
           )
           }
             </h1>
-            {type != "enquiry" ? (<h3>
+            {came != "enquiry" ? (<h3>
             You will be notified with all of the latest news and releases
             as soon as they come to light.
           </h3>

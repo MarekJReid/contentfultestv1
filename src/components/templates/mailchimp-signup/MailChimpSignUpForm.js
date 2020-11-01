@@ -31,7 +31,7 @@ function MailChimpSignUpForm() {
           <input type="email" placeholder="Email Address" />
           <Link 
           to="/thankyou"
-          state={{ type: "mailchimp", name: name }}
+          state={{ submissionFrom: "mailchimp", name: name }}
           style={{
             marginTop: `.4rem`
           }}
