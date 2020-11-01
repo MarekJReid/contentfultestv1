@@ -1,9 +1,9 @@
-import React,{ useEffect, useRef } from "react"
+import React,{ useEffect, useRef,useState } from "react"
 import { TweenLite } from 'gsap'
-
+import {Link} from 'gatsby'
 import "./mailchimp-modal.scss"
 function MailChimpSignUpForm() {
-
+  const [name, setName] = useState("George")
   let form = useRef(null)
 
   useEffect(() => {
@@ -29,7 +29,16 @@ function MailChimpSignUpForm() {
         <form>
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Email Address" />
-          <input type="submit" value="Subscribe" />
+          <Link 
+          to="/thankyou"
+          state={{ type: "mailchimp", name: name }}
+          style={{
+            marginTop: `.4rem`
+          }}
+          >
+           <input type="submit" value="Subscribe" />
+          </Link>
+          
         </form>
       </div>
     </div>

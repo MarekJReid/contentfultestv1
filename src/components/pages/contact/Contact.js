@@ -1,6 +1,8 @@
-import React from "react"
+import React, {useState} from "react"
+import {Link} from 'gatsby'
 import "./contact.scss"
 function ContactPage() {
+  const [name, setName] = useState("George")
   return (
     <div className="contact-page">
       <div className="contact-intro">
@@ -43,7 +45,14 @@ function ContactPage() {
        
         </div>
 
-        <div className="contact-submit-button"><p>Submit</p></div>
+        <div className="contact-submit-button">
+          <Link 
+          to="/thankyou"
+          state={{ type: "enquiry", name: name }}
+          >
+            <p>Submit</p>
+          </Link>
+        </div>
       </div>
     </div>
   )

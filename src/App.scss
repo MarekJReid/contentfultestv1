@@ -9,8 +9,22 @@ $text: #21285e;
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  
 }
+
+html {
+  font-size: 100%;
+
+  @media (min-width: 600px) and (max-width: 750px) {
+    font-size: 103%;
+  }
+  @media (min-width: 751px) and (max-width: 1080px) {
+    font-size: 107%;
+  }
+  @media (min-width: 1600px) {
+    font-size: 150%;
+  }
+}
+
 a p {
   all: unset;
 }
@@ -38,7 +52,6 @@ ul li {
 
 a {
   text-decoration: none;
-
 }
 
 p,
@@ -63,10 +76,10 @@ span {
   &:hover {
     background: #0d6989;
     color: white !important;
-    translate: scale(1.0) translateY(2px)
+    translate: scale(1) translateY(2px);
   }
   &:hover p {
-    color:white;
+    color: white;
   }
 }
 
@@ -85,10 +98,10 @@ span {
   &:hover {
     background: #0d6989;
     color: white !important;
-    translate: scale(1.0) translateY(2px)
+    translate: scale(1) translateY(2px);
   }
   &:hover p {
-    color:white;
+    color: white;
   }
 }
 .btn-disabled {
@@ -103,18 +116,17 @@ span {
   margin-top: 1rem;
   text-align: center;
   padding: 0;
-  
+
   &:hover {
     background: #eff1f1ce;
     color: white !important;
-    translate: scale(1.0) translateY(2px);
+    translate: scale(1) translateY(2px);
     border: 3px solid rgb(83, 109, 109);
   }
   &:hover p {
     color: darkgray;
   }
 }
-
 
 .mobile-nav-box {
   display: none;
@@ -219,7 +231,6 @@ span {
     height: 50%;
     width: 70%;
     padding: 1rem;
-    
 
     h1 {
       font-size: 500%;
@@ -433,11 +444,10 @@ span {
         padding: 0 1rem;
         width: 4rem;
         height: 1.5rem;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         color: white;
         text-align: center;
         &:hover {
-        
           border-bottom: 2px white solid;
         }
       }
@@ -449,8 +459,6 @@ span {
     }
   }
 }
-
-
 
 @media (max-width: 600px) {
   body {
@@ -637,6 +645,45 @@ span {
 
           width: 70%;
         }
+      }
+    }
+  }
+}
+
+.thankyou-page {
+  min-height: 90vh;
+  min-width: 100vw;
+  margin-top: 5rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  .thankyou-container {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    .pic-container {
+      width: 45rem;
+      min-height: 70vh;
+      background: saddlebrown;
+      height: 10rem;
+      @media (max-width: 750px) {
+        min-height: 50vh;
+      }
+      img {
+        min-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .text-container {
+      width: 25rem;
+      padding: 1rem;
+      @media (max-width: 1350px) {
+        min-width: 90vw;
+        text-align: center;
+        font-size: 90%;
       }
     }
   }

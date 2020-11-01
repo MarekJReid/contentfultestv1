@@ -1,13 +1,28 @@
 import React from "react"
-
+import img from '../images/thankyou-landing.jpg'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
-const NotFoundPage = () => (
+
+const NotFoundPage = () =>  (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="thankyou-page">
+      <div className="thankyou-container">
+        <div className="pic-container">
+          <img src={img} alt=""/>
+        </div>
+        <div class="text-container">
+          <h1>
+            OOPS!
+            {/* Thank you {name} much for your {submissionType}! */}
+          </h1>
+          <h3>
+                You have magically appeared a page or route that does not exist. Please go back to 
+                continue your browsing experience.
+              </h3>
+         <p>Regards, The Hope Barometer</p>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
