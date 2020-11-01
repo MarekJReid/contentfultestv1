@@ -5,7 +5,8 @@ import img from '../images/thankyou-landing.jpg'
 function ThankYou({location}) {
 //  let type = location.state.type
 //  let name = location.state.name
-
+let state = location.state
+console.log(state)
   return (
     <Layout>
       <div className="thankyou-page">
