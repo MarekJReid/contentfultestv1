@@ -90,14 +90,9 @@ function Hero() {
               onKeyDown={cclickMobNavClose}
               onClick={cclickMobNavClose}
               ref={el => (mobNavMenuClose = el)}
-              style={{
-                fontFamily: `Arial`,
-                fontSize: `400%`,
-                color: `yellow`,
-                padding: `1rem`,
-              }}
+             
             >
-              x{" "}
+              x
             </div>
             <div className="links-box">
               <ul ref={el => (mobNavMenuLinks = el)}>

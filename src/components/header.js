@@ -74,20 +74,19 @@ console.log(mobileNavMenu)
               </div>
             </Link>
 
+            
+        
             <div
               className="close-icon"
               onKeyDown={cclickMobNavClose}
               onClick={cclickMobNavClose}
               ref={el => (mobNavMenuClose = el)}
-              style={{
-                color: `yellow`,
-                fontSize: `300%`,
-                margin: `0`,
-                paddingLeft: `7rem`,
-              }}
-            > x 
+             
+            >
+              x
             </div>
             <div className="links-box">
+            
               <ul ref={el => (mobNavMenuLinks = el)}>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
                   <Link to="/about">

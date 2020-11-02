@@ -549,12 +549,19 @@ span {
         }
       }
 
-      .title {
-     
+      .x {
+        color: yellow;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4rem;
+        opacity: 0;
+       
       }
 
       .close-icon {
-       
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 400%;
+        color: yellow;
+        padding: 1rem;
       }
 
       .links-box {
