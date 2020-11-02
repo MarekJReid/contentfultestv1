@@ -581,17 +581,19 @@ span {
           flex-direction: column;
           margin-left: auto;
           margin-right: auto;
+          padding: 0;
+          width: 100%;;
 
           li {
             height: 1rem;
             list-style: none;
             color: yellow;
-            font-size: 4rem;
-            padding: 1rem 2rem 2rem 2rem;
+            font-size: 3rem;
+            padding: 1rem 2rem;
             margin: 1rem;
             text-align: center;
             font-family: Arial;
-            font-weight: bold;
+            font-weight: 900;
           }
         }
       }

@@ -108,6 +108,11 @@ function Hero() {
                   </Link>
                 </li>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
+                  <Link to="/reports">
+                    <p style={{ color: `yellow` }}>Reports</p>
+                  </Link>
+                </li>
+                <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
                   <Link to="/news">
                     <p style={{ color: `yellow` }}>News</p>
                   </Link>
