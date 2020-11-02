@@ -3,6 +3,7 @@
   margin-top: 12vh;
   display: flex;
   flex-direction: column;
+  
   //  opacity: 0;
   .partners-intro-box {
     width: 100%;
@@ -114,20 +115,27 @@ li {
   margin-top: 10rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;@media (max-width: 600px) {
+    margin-top: 5rem;
+    
+   } 
   .country-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 90%;
+  
     .country-container-pic {
       overflow: hidden;
       width: 40rem;
-      height: 80vh;
+      
       display: flex;
       align-items: center;
       z-index: -1;
+      @media (min-width: 600) {
+        height: 80vh;
+      }
       img {
         max-height: 155%;
         max-width: 100%;
@@ -145,6 +153,30 @@ li {
         margin: 0 0 0 -5rem;
         opacity: 0;
         z-index: -1;
+        @media (max-width: 600px) {
+         margin: 0;
+         text-align: center;
+        } 
+      }
+
+      .institution p {
+        padding: 1rem;
+        background: white;
+        z-index: 100;
+        margin-left: -2rem;
+        background: white;
+        padding: .5rem 1rem .5rem 1rem;
+        margin-top: -1rem;
+
+        @media (max-width: 600px) {
+          opacity: 1;
+    transform: translate(0px, 0px);
+    text-align: center;
+    text-decoration: italic;
+    font-weight: 600;
+    margin-top: 0rem;
+    padding: 0;
+        }
       }
      .content-header {
       display: flex;
@@ -160,28 +192,20 @@ li {
           li {
             display: inline;
             padding: 0 1rem;
-            
+            transition: all .2s ease-in-out;
             .active {
               
               border-bottom: 1px solid black;
               
             }
             &:hover {
-              border-bottom: 1px solid black;
+            
             }
           }
          
         }
       }
-      .qauls {
-        background: white;
-        padding: 0.25rem;
-        padding: 0.5rem 1rem;
-        margin: -1rem 0 0 -2rem;
-        font-style: italic;
-        opacity: 0;
-        z-index: 1;
-      }
+      
       p {
         font-style: normal;
         margin: 0;

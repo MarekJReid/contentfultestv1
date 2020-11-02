@@ -56,16 +56,22 @@ function Country(props) {
           </div>
           <div class="country-container-text">
             <h1 ref={el => (heading = el)}>{country}</h1>
-
+            <p className="institution" ref={el => (qauls = el)}
+            
+            style={{
+              textAlign: `center`,
+              marginTop: `-.5rem`
+            }}
+            >{institutionName}</p>
             <div class="content-header">
-              <span>
-                <p className="qauls" ref={el => (qauls = el)}>
-                  {institutionName}
-                </p>
-              </span>
+              
 
               <nav>
-                <ul ref={el => (nav = el)}>
+                <ul ref={el => (nav = el)}
+                style={{
+                  paddingBottom: `.5rem`
+                }}
+                >
                   <li onClick={() => setSubPage(1)}>
                     <span className={subPage === 1 ? "active" : ""}>
                       Introduction

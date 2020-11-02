@@ -55,16 +55,16 @@ function Country(props) {
             <img src={pic} alt="" ref={el => (img = el)} />
           </div>
           <div class="country-container-text">
+           
+            <div>
             <h1 ref={el => (heading = el)}>{country}</h1>
-
-            <div class="content-header">
-              <span>
+            penis
                 <p className="qauls" ref={el => (qauls = el)}>
                   {institutionName}
                 </p>
-              </span>
-
-              <nav>
+              </div>
+            <div class="content-header">
+                <nav>
                 <ul ref={el => (nav = el)}>
                   <li onClick={() => setSubPage(1)}>
                     <span className={subPage === 1 ? "active" : ""}>
