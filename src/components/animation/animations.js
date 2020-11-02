@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 // navbar open / close 
 export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 
-    TweenMax.to(node, 1, {width: "100vw", display: "flex"})
+    TweenMax.to(node, .7, {width: "100vw", display: "flex"})
     
     TweenMax.fromTo(
       nodeLinks,
@@ -48,7 +48,7 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 export const clickMobNavClose = (node, nodeClose, nodeLinks) => {
   TweenMax.to(nodeClose, .4, { autoAlpha: 0});
   TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0, display: "none" });
-  TweenMax.to(node, 1, {display: "none", width: 0 }, 1);
+  TweenMax.to(node, .7, {display: "none", width: 0 }, 1);
 };
 
 // navbar on page load
