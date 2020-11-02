@@ -19,13 +19,15 @@
     }
     .reports-subtitle {
       h3 {
-        margin: 0;
+        margin: .5rem;
         padding: 0;
       }
+
     }
     .reports-para {
-      width: 80%;
-      padding-bottom: 1rem;
+     padding: 0 2rem;
+      margin-top: -.5rem;
+   
     }
   }
   .reports-grid {
@@ -70,13 +72,17 @@
         }
       }
       .reports-card-text {
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
         @media (min-width: 800px) {
           width: 60%;
         
         }
         .seperating-line {
           border-bottom: 1px solid black;
+          @media (min-width: 800px) {
+            width: 60%;
+          
+          }
         }
         .reports-card-subtitle {
           margin: 0;
@@ -100,6 +106,16 @@
         display: flex;
         justify-content: center;
         padding-top: .3rem;
+
+        @media (min-width: 800px) {
+          display: flex;
+    justify-content: flex-end;
+    padding-top: .3rem;
+    width: 91%;
+    .btn-dissabled {
+      margin: 0;
+    }
+        }
       }
     }
   }

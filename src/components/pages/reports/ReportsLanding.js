@@ -58,7 +58,7 @@ function ReportsLanding() {
               Ducks. There how preparation such are the to the luxury discharge
               and my cons, refute. What cache a following the do and its
               continued then it was have frequency of in which, good to parks.
-            </p>
+            </p> 
           </div>
         </div>
 
@@ -81,7 +81,7 @@ function ReportsLanding() {
                   <div className="reports-card-author-info">
                     <span> {item.authorInfo}</span>
                   </div>
-                  <div className="reports-intro">{item.para.slice(0, 250)}</div>
+                  <div className="reports-intro"><p>{item.para.slice(0, 250)} ...</p></div>
                 <div class="button-container">
                 <div className="btn-disabled">
                    
