@@ -42,8 +42,8 @@ console.log(mobileNavMenu)
                 marginTop: `-.42rem`,
               }}
             >
-              {" "}
-              ={" "}
+             
+              =
             </div>
           </div>
           <div className="mobile-menu" ref={el => (mobNavMenu = el)}>
@@ -79,9 +79,13 @@ console.log(mobileNavMenu)
               onKeyDown={cclickMobNavClose}
               onClick={cclickMobNavClose}
               ref={el => (mobNavMenuClose = el)}
-            >
-              {" "}
-              <div> x </div>
+              style={{
+                color: `yellow`,
+                fontSize: `300%`,
+                margin: `0`,
+                paddingLeft: `7rem`,
+              }}
+            > x 
             </div>
             <div className="links-box">
               <ul ref={el => (mobNavMenuLinks = el)}>

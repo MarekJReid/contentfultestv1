@@ -5,17 +5,16 @@ import {
   nav2trans,
   heroBoxTrans,
   clickMobileNavMenu,
-  clickMobNavClose
+  clickMobNavClose,
 } from "../../../animation/animations"
 
 function Hero() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const [isOut, setIsOut] = useState(false)
   let heroBox = useRef(null)
   let header = useRef(null)
   let heroTextBoxTexth3 = useRef(null)
   let heroTextBoxText = useRef(null)
-
 
   let mobNavMenu = useRef(null)
   let mobNavMenuLinks = useRef(null)
@@ -46,73 +45,86 @@ function Hero() {
         <h1 style={{ color: `yellow` }}>The Hope Barometer</h1>
         <div className="" onClick={cclickMobileNavMenu}>
           <div class="">
-            <div 
-            style={{
-              color: `yellow`, fontSize:`300%`, marginTop: `-.42rem`, paddingRight: `1.5rem`
-            }}
-            > = </div>
+            <div
+              style={{
+                color: `yellow`,
+                fontSize: `300%`,
+                marginTop: `-.42rem`,
+                paddingRight: `1.5rem`,
+              }}
+            >
+              {" "}
+              ={" "}
+            </div>
           </div>
           <div className="mobile-menu" ref={el => (mobNavMenu = el)}>
-          
-              <Link to="/" 
-              >
-                <div className="nav-title">
-                <h5 style={{color: `yellow`, fontSize: `300%`, marginTop: `.2rem`, marginBottom: `-.5rem`, paddingLeft: `.5rem`, paddingTop: `.5rem`}}>The Hope</h5> 
-                <h5 style={{color: `yellow`, fontSize: `300%`, margin: `0`, paddingLeft: `7rem`}}>Barometer</h5> 
-                </div>
-              </Link>
-         
+            <Link to="/">
+              <div className="nav-title">
+                <h5
+                  style={{
+                    color: `yellow`,
+                    fontSize: `300%`,
+                    marginTop: `.2rem`,
+                    marginBottom: `-.5rem`,
+                    paddingLeft: `.5rem`,
+                    paddingTop: `.5rem`,
+                  }}
+                >
+                  The Hope
+                </h5>
+                <h5
+                  style={{
+                    color: `yellow`,
+                    fontSize: `300%`,
+                    margin: `0`,
+                    paddingLeft: `7rem`,
+                  }}
+                >
+                  Barometer
+                </h5>
+              </div>
+            </Link>
+
             <div
               className="close-icon"
               onKeyDown={cclickMobNavClose}
               onClick={cclickMobNavClose}
               ref={el => (mobNavMenuClose = el)}
-            >   <div 
-            style={{
-              color: `yellow`, fontSize:`300%`, paddingRight: `1.5rem`
-            }}
-            > x </div></div>
+              style={{
+                fontFamily: `Arial`,
+                fontSize: `400%`,
+                color: `yellow`,
+                padding: `1rem`,
+              }}
+            >
+              x{" "}
+            </div>
             <div className="links-box">
               <ul ref={el => (mobNavMenuLinks = el)}>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
-                  <Link to="/about"
-                  >
-                    <p
-                     style={{color: `yellow`}}
-                    >About</p>
+                  <Link to="/about">
+                    <p style={{ color: `yellow` }}>About</p>
                   </Link>
                 </li>
 
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
-                <Link to="/survey"
-                  >
-                    <p
-                     style={{color: `yellow`}}
-                    >Survey</p>
+                  <Link to="/survey">
+                    <p style={{ color: `yellow` }}>Survey</p>
                   </Link>
                 </li>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
-                <Link to="/news"
-                  >
-                    <p
-                     style={{color: `yellow`}}
-                    >News</p>
+                  <Link to="/news">
+                    <p style={{ color: `yellow` }}>News</p>
                   </Link>
                 </li>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
-                <Link to="/partners"
-                  >
-                    <p
-                     style={{color: `yellow`}}
-                    >Partners</p>
+                  <Link to="/partners">
+                    <p style={{ color: `yellow` }}>Partners</p>
                   </Link>
                 </li>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
-                <Link to="/contact"
-                  >
-                    <p
-                     style={{color: `yellow`}}
-                    >Contact</p>
+                  <Link to="/contact">
+                    <p style={{ color: `yellow` }}>Contact</p>
                   </Link>
                 </li>
               </ul>

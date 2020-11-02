@@ -15,7 +15,7 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
       .6,
       {
        
-        y: "100vh",
+        y: 200,
 
         opacity: 0,
       },
@@ -25,9 +25,6 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
         display: "flex",
         justifyContent: "center",
         alignContent: "center",
-        // top: "18%",
-        // left: "5%",
-        // translate: "transform(-50%, -50%)",
         opacity: 1,
         delay: 0.95,
       },
@@ -44,8 +41,8 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 };
 
 export const clickMobNavClose = (node, nodeClose, nodeLinks) => {
-  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0});
-  TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0 });
+  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0, rotation: 360,  transformOrigin:"50% 50%", });
+  TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0, display: "none" });
   TweenMax.to(node, 1, {display: "none", width: 0 }, 1);
 };
 
