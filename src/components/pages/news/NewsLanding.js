@@ -21,6 +21,7 @@ console.log('data')
 style={{
   marginTop: `10vh`,
   display: `flex`,
+  justifyContent: `center`
 }}
 >
 <div className="news-constainer">

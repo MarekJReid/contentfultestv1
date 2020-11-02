@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Link } from "gatsby"
-import "../../../../../src/App.scss"
 import {
   nav2trans,
   heroBoxTrans,
@@ -10,7 +9,6 @@ import {
 
 function Hero() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isOut, setIsOut] = useState(false)
   let heroBox = useRef(null)
   let header = useRef(null)
   let heroTextBoxTexth3 = useRef(null)

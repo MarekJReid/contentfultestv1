@@ -11,7 +11,8 @@ a {
     flex-direction: row;
     @media (max-width: 600px) {
       flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    overflow: hidden;
     }
   .about-page-nav {
     height: 100%;
@@ -19,8 +20,13 @@ a {
     display: flex;
     
     @media (max-width: 600px) {
-      width: 100%;
-    
+      margin-top: -1rem;
+      margin-left: -1rem;
+      width: 110%;
+      box-shadow: 3px 7px 52px -12px rgba(177, 175, 175, 0.37);
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
     }
 
     ul {
@@ -48,12 +54,16 @@ a {
           padding: 1rem;
         }
         &:hover {
-          text-decoration: none;
-          transform: scale(1.2);
-          transition: all 0.4s ease-in;
-          padding: 1rem 1.5rem;
-          margin: 0 1rem;
+          text-decoration: underline;
+          @media (min-width: 602px) {
+            text-decoration: none;
+            transform: scale(1.2);
+            transition: all 0.4s ease-in;
+            padding: 1rem 1.5rem;
+            margin: 0 1rem;
+          }
         }
+       
       }
     }
   }
@@ -192,11 +202,17 @@ a {
         width: 100%;
         display: flex;
         justify-content: flex-start;
+        @media (max-width: 600px) {
+          justify-content: center;
+          }
       }
       .concept-container-buttons-left {
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        @media (max-width: 600px) {
+          justify-content: center;
+          }
       }
     }
   }

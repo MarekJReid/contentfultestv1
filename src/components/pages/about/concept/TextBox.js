@@ -1,19 +1,24 @@
-import React from "react"
+import React,{useRef, useEffect} from "react"
 import '../about.scss'
-
+import {TweenLite} from 'gsap'
 import concept from './concept.json'
 
 
 function TextBox({id, titleAlign}) {
   const {name, intro} = concept[id]
  
+let fade = useRef(null)
 
-
+useEffect(() => {
+ 
+if (id) {TweenLite.to(fade, 3, {autoAlpha: 1, })}
+})
 
   return (
     <div
       
        className="textBox"
+       ref={el => (fade = el)}
     > 
       {name ? (
         <div 

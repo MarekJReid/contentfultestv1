@@ -8,9 +8,8 @@ import PhotoBox from "./PhotoBox"
 
 let tl = new TimelineLite()
 
-
 function AboutSliders({ contentRight, startNum }) {
-  const [buttons, setButtons] = useState(false)
+  const [buttons, setButtons] = useState(true)
   const [boxNum, setBoxNum] = useState(0)
 
   let picBox = useRef(null)
@@ -20,7 +19,6 @@ function AboutSliders({ contentRight, startNum }) {
   useEffect(() => {
     TweenLite.to([picBox, textBox, subNavButtons], 1, {
       autoAlpha: 1,
-    
     })
   })
 
@@ -28,56 +26,39 @@ function AboutSliders({ contentRight, startNum }) {
     tl.to([picBox, textBox, subNavButtons], 1, { opacity: 0 })
 
     if (buttons) {
-      tl
-        .fromTo(
-          [textBox],
-          1,
-          { autoAlpha: 0, },
-          { autoAlpha: 1, justifyContent: "flex-end", }
-        )
-        .fromTo(
-          [picBox],
-          1,
-          { autoAlpha: 0},
-          {
-            autoAlpha: 1,
-         
-            justifyContent: "flex-end",
-             delay: 2
-          }
-        )
-
-      setTimeout(() => {
-        setButtons(!buttons)
-      }, 1100)
-      tl.to(subNavButtons, 1, { autoAlpha: 1 })
-    } else {
-      tl
-        .fromTo([picBox], 1, { autoAlpha: 0,}, { autoAlpha: 1, })
-        .fromTo([textBox], 1, { autoAlpha: 0,  }, { autoAlpha: 1, })
-
-      setTimeout(() => {
-        setButtons(!buttons)
-      }, 1100)
-      tl.to(subNavButtons, 1, { autoAlpha: 1 })
+      tl.fromTo([textBox], .1, { autoAlpha: 0 }, { autoAlpha: 1 })
+      .fromTo(
+        [picBox],
+        .1,
+        { autoAlpha: 0,
+        
+        },
+        {
+          autoAlpha: 1,
+        }
+      )
     }
   }
-
+  
   const clickButtons = () => {
     setTimeout(() => {
+      setButtons(!buttons)
       boxNum < 3 ? setBoxNum(boxNum + 1) : setBoxNum(0)
     }, 1000)
     animations()
+
+    
   }
 
   const previousClickButtons = () => {
     setTimeout(() => {
       boxNum > 0 ? setBoxNum(boxNum - 1) : console.log("boob")
+      setButtons(!buttons)
     }, 1000)
     animations()
   }
   const startN = startNum
-  
+
   return (
     <div>
       <div class="concept-page">
@@ -94,7 +75,11 @@ function AboutSliders({ contentRight, startNum }) {
           </div>
 
           <div
-            class={buttons ? "concept-container-text-right" : "concept-container-pic-right"}
+            class={
+              buttons
+                ? "concept-container-text-right"
+                : "concept-container-pic-right"
+            }
             ref={el => (textBox = el)}
           >
             {buttons ? (
@@ -125,7 +110,7 @@ function AboutSliders({ contentRight, startNum }) {
 
               <span>
                 <span class="next" onClick={clickButtons}>
-                &nbsp; Next
+                  &nbsp; Next
                 </span>
               </span>
             </div>
