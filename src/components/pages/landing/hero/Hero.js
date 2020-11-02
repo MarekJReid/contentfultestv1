@@ -48,7 +48,7 @@ function Hero() {
           <div class="">
             <div 
             style={{
-              color: `yellow`, fontSize:`300%`, marginTop: `-.42rem`, paddingRight: `1.5rem`
+              color: `yellow`, fontSize:`300%`, marginTop: `-.42rem`
             }}
             > = </div>
           </div>
@@ -69,7 +69,7 @@ function Hero() {
               ref={el => (mobNavMenuClose = el)}
             >   <div 
             style={{
-              color: `yellow`, fontSize:`300%`, paddingRight: `1.5rem`
+              color: `yellow`, fontSize:`400%`, paddingRight: `1.5rem`
             }}
             > x </div></div>
             <div className="links-box">
