@@ -8,39 +8,45 @@ gsap.registerPlugin(ScrollTrigger);
 // navbar open / close 
 export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 
-    TweenMax.to(node, 1, {width: "100vw"})
-    TweenMax.fromTo(
-      nodeClose,
-      1,
-      { autoAlpha: 0 },
-      { autoAlpha: 1, delay: 0.5 }
-    );
+    TweenMax.to(node, 1, {width: "100vw", display: "flex"})
+    
     TweenMax.fromTo(
       nodeLinks,
-      1,
+      .6,
       {
-       top: "100%",
-
+       
+        y: "100vh",
 
         opacity: 0,
       },
       {
-        top: "18%",
-        left: "5%",
-        translate: "transform(-50%, -50%)",
+        y: 0,
+        marginTop: "15vh",
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+        // top: "18%",
+        // left: "5%",
+        // translate: "transform(-50%, -50%)",
         opacity: 1,
         delay: 0.95,
       },
       2
+    );
+    TweenMax.fromTo(
+      nodeClose,
+      .1,
+      { autoAlpha: 0 },
+      { autoAlpha: 1, delay: 1.7 }
     );
  
   
 };
 
 export const clickMobNavClose = (node, nodeClose, nodeLinks) => {
-  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0, spin: 180});
+  TweenMax.to(nodeClose, 0.4, { autoAlpha: 0});
   TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0 });
-  TweenMax.to(node, 1, { width: 0 }, 1);
+  TweenMax.to(node, 1, {display: "none", width: 0 }, 1);
 };
 
 // navbar on page load
