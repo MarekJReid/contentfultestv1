@@ -38,9 +38,7 @@ style={{
     </div>
   </div>
   <NewsCards />
-  
-  boobs
-</div>
+  </div>
 </div>
   )
 }
