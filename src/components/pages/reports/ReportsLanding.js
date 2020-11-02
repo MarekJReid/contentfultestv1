@@ -4,6 +4,8 @@ import "./reportsSass.scss"
 
 import reports from "./reportsDB.json"
 
+import reportPic1 from '../../../images/reports/report1.jpg'
+
 function ReportsLanding() {
   const [numreports, setNumreports] = useState(3)
 
@@ -19,8 +21,8 @@ function ReportsLanding() {
   }
 
   useEffect(() => {
-    gsap.from(reportsGrid.children, 1, {
-      x: -100,
+    gsap.from(reportsGrid.children, .5, {
+      y: -50,
       autoAlpha: 0,
       delay: 0.2,
       stagger: {
@@ -66,7 +68,7 @@ function ReportsLanding() {
               <div className="reports-card">
                 <div className="reports-card-pic">
                   <img
-                    src={`https://picsum.photos/id/${item.img}/300`}
+                    src={reportPic1}
                     alt=""
                   />{" "}
                 </div>
@@ -80,12 +82,14 @@ function ReportsLanding() {
                     <span> {item.authorInfo}</span>
                   </div>
                   <div className="reports-intro">{item.para.slice(0, 250)}</div>
-
-                  <div className="btn-disabled">
+                <div class="button-container">
+                <div className="btn-disabled">
                    
-                      <p>Coming Soon</p>
-                 
-                  </div>
+                   <p>Coming Soon</p>
+              
+               </div>
+                </div>
+                  
                 </div>
               </div>
             ) : null
