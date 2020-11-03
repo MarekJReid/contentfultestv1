@@ -64,7 +64,7 @@ export const navPageLoad = (node) => {
 }
 
 //navbar from transperant after leaving hero section
-export const nav2trans = (node, trigger) => {
+export const nav2trans = (node) => {
     TweenMax.fromTo(
         node, 1,
         {
@@ -78,10 +78,10 @@ export const nav2trans = (node, trigger) => {
           
           scrollTrigger: {
             id: "navbar",
-            trigger: trigger,
-            start: "top top",
+            trigger: node,
+            start: "bottom 10%",
             toggleActions: "play none none reverse",
-            // markers: true,
+            markers: true,
           },
         }
       );
