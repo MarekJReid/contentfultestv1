@@ -26,7 +26,7 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
         justifyContent: "center",
         alignContent: "center",
         opacity: 1,
-        delay: 1.1,
+        delay: 1.05,
       },
       2
     );
@@ -47,7 +47,7 @@ export const clickMobileNavMenu = (node, nodeClose, nodeLinks) => {
 
 export const clickMobNavClose = (node, nodeClose, nodeLinks) => {
   TweenMax.to(nodeClose, .4, { autoAlpha: 0});
-  TweenMax.fromTo(nodeLinks, 0.95, { opacity: 1 }, { opacity: 0, display: "none" });
+  TweenMax.fromTo(nodeLinks, 0.2, { opacity: 1,}, { opacity: 0, display: "none" });
   TweenMax.to(node, .7, {display: "none", width: 0 }, 1);
 };
 
@@ -81,7 +81,7 @@ export const nav2trans = (node) => {
             trigger: node,
             start: "bottom 10%",
             toggleActions: "play none none reverse",
-            markers: true,
+            // markers: true,
           },
         }
       );

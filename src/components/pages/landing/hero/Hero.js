@@ -2,10 +2,12 @@ import React, { useRef, useEffect, useState } from "react"
 import {
   heroBoxTrans,
 } from "../../../animation/animations"
+import MailchimpModal from "../../../templates/mailchimp-signup/MailchimpModal"
 
 import NavHero from './NavHero'
 
 function Hero() {
+  const [modalOpen, setModalOpen] = useState(true)
 
   let heroBox = useRef(null)
   let header = useRef(null)
@@ -18,6 +20,9 @@ function Hero() {
 
 
   return (
+    <>
+<MailchimpModal/>
+    
     <div className="box-hero" ref={el => (heroBox = el)}>
       <NavHero />
       <div className="animation-box">
@@ -31,6 +36,7 @@ function Hero() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

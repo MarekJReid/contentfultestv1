@@ -16,6 +16,7 @@ function HeroNav() {
     let mobNavMenuClose = useRef(null)
 
     useEffect(() => {
+        
         nav2trans(navBox)
       })
 
@@ -36,8 +37,10 @@ function HeroNav() {
         <nav>
      {/* Mobile Nav */}
      <div className="mobile-nav-box">
-     <h1 style={{ color: `yellow` }}>
-       <Link to="/"> The Hope Barometer </Link>
+     <h1 >
+       <Link to="/"
+       style={{ color: `yellow`, fontFamily: `GothamPro`, fontSize: `130%` }}
+       > The Hope Barometer </Link>
      </h1>
      <div className="" onClick={cclickMobileNavMenu}>
        <div class="">
@@ -45,8 +48,7 @@ function HeroNav() {
            style={{
              color: `yellow`,
              fontSize: `300%`,
-             marginTop: `-.42rem`,
-             paddingRight: `1.5rem`,
+             marginTop: `-.42rem`
            }}
          >
            {" "}
