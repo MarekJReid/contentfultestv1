@@ -30,9 +30,13 @@ console.log(mobileNavMenu)
 
   return (
     <div class="">
-      {/* Mobile Nav */}
+     {/* Mobile Nav */}
       <div className="mobile-nav-box">
-        <h1 style={{ color: `yellow` }}>The Hope Barometer</h1>
+      
+          
+        <h1 >
+          <Link to="/" style={{ color: `yellow`, fontFamily:"GothamPro" }}> The Hope Barometer </Link>
+        </h1>
         <div className="" onClick={cclickMobileNavMenu}>
           <div class="">
             <div
@@ -40,10 +44,11 @@ console.log(mobileNavMenu)
                 color: `yellow`,
                 fontSize: `300%`,
                 marginTop: `-.42rem`,
+                paddingRight: `1.5rem`,
               }}
             >
-             
-              =
+              {" "}
+              ={" "}
             </div>
           </div>
           <div className="mobile-menu" ref={el => (mobNavMenu = el)}>
@@ -74,8 +79,6 @@ console.log(mobileNavMenu)
               </div>
             </Link>
 
-            
-        
             <div
               className="close-icon"
               onKeyDown={cclickMobNavClose}
@@ -86,7 +89,6 @@ console.log(mobileNavMenu)
               x
             </div>
             <div className="links-box">
-            
               <ul ref={el => (mobNavMenuLinks = el)}>
                 <li onKeyDown={cclickMobNavClose} onClick={cclickMobNavClose}>
                   <Link to="/about">
@@ -123,19 +125,19 @@ console.log(mobileNavMenu)
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="nav-box" ref={el => (header = el)}>
-        <div class="home-link">
-          <Link to="/">
-            <div className="nav-title">
-              <span className="">The H</span>
-              <span className="nav-title-o">o</span>
-
-              <span>pe Barometer</span>
-            </div>
-          </Link>
         </div>
+
+        <div className="nav-box" ref={el => (header = el)}
+        style={{background: `white`}}
+        >
+        <Link to="/">
+          <div className="nav-title">
+            <span className="">The H</span>
+            <span className="nav-title-o">o</span>
+
+            <span>pe Barometer</span>
+          </div>
+        </Link>
         <div className="nav-links">
           <ul>
             <li></li>
@@ -172,7 +174,8 @@ console.log(mobileNavMenu)
           </ul>
         </div>
       </div>
-    </div>
+        </div>
+     
   )
 }
 

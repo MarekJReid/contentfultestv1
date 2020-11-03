@@ -56,8 +56,9 @@ function Hero() {
             </div>
           </div>
           <div className="mobile-menu" ref={el => (mobNavMenu = el)}>
-            <Link to="/">
+            
               <div className="nav-title">
+             
                 <h5
                   style={{
                     color: `yellow`,
@@ -68,7 +69,7 @@ function Hero() {
                     paddingTop: `.5rem`,
                   }}
                 >
-                  The Hope
+                <Link to="/">  The Hope </Link> 
                 </h5>
                 <h5
                   style={{
@@ -80,8 +81,9 @@ function Hero() {
                 >
                   Barometer
                 </h5>
+                 
               </div>
-            </Link>
+          
 
             <div
               className="close-icon"

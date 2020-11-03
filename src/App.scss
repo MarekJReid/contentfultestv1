@@ -412,11 +412,13 @@ span {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    @media (max-width: 600px) {
+      padding: 1rem 0;
+    }
     .footer-info {
       width: 30rem;
       padding: 1rem 0;
-
-      ul {
+           ul {
         margin: 0;
         li {
           text-align: center;
@@ -500,7 +502,7 @@ span {
         font-size: 3rem;
         font-family: GothamPro;
         font-weight: 900;
-        a span  {
+        a span  h1 {
        
           @media (max-width: 600) {
             color:rgba(255, 249, 45, 1) 33%;

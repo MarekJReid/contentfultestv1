@@ -28,7 +28,11 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div class="footer-links">
+        <div class="footer-links"
+        style={{
+          paddingBottom: `1rem`
+        }}
+        >
           <div class="flex-container">
             <div class="flex-item">
               {" "}
