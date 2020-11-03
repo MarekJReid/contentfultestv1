@@ -1,37 +1,36 @@
-
 .mailchimp-modal {
-opacity: 0;
- height: 100vh;
- position: absolute;
- background: transparent;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
-z-index: 1000;
+  opacity: 0;
+  height: 100vh;
+  position: absolute;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  z-index: 1000;
 
   .modal-box {
-position: absolute;
-background: white;
-width: 90%;
+    position: absolute;
+    background: white;
+    width: 90%;
+    
+    box-shadow: 0 0.75rem 0.5rem -0.5rem rgba(rgb(212, 160, 109), 0.671);
+    border-radius: 0.5rem;
 
-box-shadow: 0 .75rem .5rem -.5rem rgba(rgb(212, 160, 109), 0.671);
-border-radius: .5rem;;
-
-.close {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-}
-   
+    .close {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+    }
   }
 }
 
 .form-container {
   text-align: center;
-padding: 3rem;
+  padding: 3rem;
+  height: 100%;
   @media (max-width: 600px) {
-    margin-bottom: 35vh;
+  
   }
 
   form {
@@ -39,36 +38,38 @@ padding: 3rem;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-   
+
     & > input {
       flex: 1 1 10ch;
-      margin: .5rem;
-      
+      margin: 0.5rem;
+
       &[type="email"] {
         flex: 3 1 30ch;
       }
     }
   }
-  
+
   input {
     border: none;
     background: lightgrey;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     padding: 1.5rem 1rem;
     font-size: 110%;
-    
+
     &[type="submit"] {
       background: #0d6989;
       color: white;
       font-weight: bold;
       font-size: 130%;
-      box-shadow: 0 .75rem .5rem -.5rem lightgray;
+      box-shadow: 0 0.75rem 0.5rem -0.5rem lightgray;
       transition: all 0.5s ease-in-out;
-    } &:hover {
-      transform: scale(1.02); padding: 1.5rem;
+    }
+    &:hover {
+      transform: scale(1.02);
+      padding: 1.5rem;
     }
   }
   &::placeholder {
     color: transparent;
   }
-  }
+}
