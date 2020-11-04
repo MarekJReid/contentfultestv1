@@ -11,7 +11,7 @@ function MailchimpModal() {
   useEffect(() => {
     setTimeout(() => {
       setOpen(true)
-    }, 3000)
+    }, 2000)
     openModal()
   }, [open])
 

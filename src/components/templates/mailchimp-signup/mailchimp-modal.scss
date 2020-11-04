@@ -13,14 +13,14 @@
     position: absolute;
     background: white;
     width: 90%;
-    
+    padding: .5rem;
     box-shadow: 0 0.75rem 0.5rem -0.5rem rgba(rgb(212, 160, 109), 0.671);
     border-radius: 0.5rem;
 
     .close {
       position: absolute;
-      top: 10%;
-      right: 5%;
+      top: .5rem;
+      right: 1.5rem;
     }
   }
 }
@@ -29,8 +29,11 @@
   text-align: center;
   padding: 3rem;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   @media (max-width: 600px) {
-  
+    padding: 2rem 1rem 3rem 1rem;
   }
 
   form {
@@ -42,9 +45,10 @@
     & > input {
       flex: 1 1 10ch;
       margin: 0.5rem;
-
+      
       &[type="email"] {
         flex: 3 1 30ch;
+        
       }
     }
   }
@@ -55,7 +59,7 @@
     border-radius: 0.25rem;
     padding: 1.5rem 1rem;
     font-size: 110%;
-
+    width: 100%;
     &[type="submit"] {
       background: #0d6989;
       color: white;
@@ -63,7 +67,7 @@
       font-size: 130%;
       box-shadow: 0 0.75rem 0.5rem -0.5rem lightgray;
       transition: all 0.5s ease-in-out;
-    }
+          }
     &:hover {
       transform: scale(1.02);
       padding: 1.5rem;
