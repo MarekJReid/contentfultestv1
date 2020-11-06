@@ -64,7 +64,7 @@ function NewsLandingHome() {
       <div className="news-constainer" ref={el => (container = el)}>
         <div className="news-intro-box" style={{textAlign: `center`, width: `100%`, paddingBottom: `5vh`}}>
           <div className="news-title">
-            <h1 style={{fontSize: `325%`, paddingBottom: `5vh`}}> The Latest in Hope Barometer News </h1>
+            <h1 style={{fontSize: `325%`, paddingBottom: `5vh`, paddingTop: `10rem`}}> The Latest in Hope Barometer News </h1>
           </div>
         </div>
         <div class="news-landing-container">
@@ -74,10 +74,13 @@ function NewsLandingHome() {
           <div class="card-img">
        <Img fluid={image1.fluid} />
           </div>
+         
           <div class="card-text"
           
-          style={{height: `100%`}}>
-              <h1>{newsTitle}</h1>
+          style={{height: `20rem`, display: `flex`, justifyContent: `center`}}>
+           
+           <div class="text-box">
+          <h1>{newsTitle}</h1>
               <h3>{author}</h3>
               <h4>{date}</h4>
               <p>{bodyNormal.bodyNormal.split(" ").splice(0, 50).join(" ")} ...</p>
@@ -90,6 +93,7 @@ function NewsLandingHome() {
             </div>
             </Link>
         </div>
+              </div>
           </div>
         
           </div>

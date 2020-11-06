@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image'
 import { TweenLite } from "gsap"
 import "./partners.scss"
 
@@ -7,9 +9,28 @@ import DropDownMenu from "./DropDownMenu"
 import bg from "../../../images/partners/partners.jpg"
 
 function PartnersLanding(props) {
+
+  const data = useStaticQuery(graphql`
+  query Partners {
+    file(relativePath: {eq: "partners/partners.jpg"}, childImageSharp: {fluid: {aspectRatio: {}, base64: {}, originalName: {}}}) {
+      id
+      childImageSharp {
+        id
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `)
+
   let page = useRef(null)
 
   useEffect(() => {
+
+
+
+
     TweenLite.fromTo(
       page,
       1,
@@ -39,9 +60,10 @@ function PartnersLanding(props) {
             </div>
           </div>
         </div>
-        <div class="partners-intro-image">
-          <img src={bg} alt="" />
-        </div>
+      
+        
+        <Img fluid={data.file.childImageSharp.fluid} key={data.file.childImageSharp.fluid.id} style={{zIndex: `-1`}} />
+        
       </div>
     </div>
   )

@@ -8,6 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `The Hope Barometer`,
+        short_name: `The Hope Barometer`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

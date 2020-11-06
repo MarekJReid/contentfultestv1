@@ -52,24 +52,23 @@ function Article(props) {
             class="hello"
             style={{ height: `60vh`, width: `100%`, position: `relative` }}
           >
-            <Img fluid={image2.fluid} style={{ position: `absoloute` }} />
+            {/* <Img fluid={image2.fluid} style={{ position: `absoloute` }} /> */}
           </div>
           <div class="text-section">
-            <p>{body2.bodyNormal2}</p>
+            {/* <p>{body2.bodyNormal2}</p> */}
           </div>
           <div
-          class="hello"
-          style={{ height: `60vh`, width: `100%`, position: `relative` }}
-        >
-          <Img fluid={image3.fluid} style={{ position: `absoloute` }} />
+            class="hello"
+            style={{ height: `60vh`, width: `100%`, position: `relative` }}
+          >
+            {/* <Img fluid={image3.fluid} style={{ position: `absoloute` }} /> */}
+          </div>
+
+          <div class="text-section">
+            {/* <p>{body3.bodyNormal3}</p> */}
+          </div>
         </div>
 
-        <div class="text-section">
-          <p>{body3.bodyNormal3}</p>
-        </div>
-        </div>
-
-       
         <p>
           <Link
             to="/news"

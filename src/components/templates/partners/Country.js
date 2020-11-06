@@ -8,13 +8,15 @@ import Layout from "../../layout"
 let tl = new TimelineLite()
 
 function Country(props) {
+  console.log(props)
   const [subPage, setSubPage] = useState(1)
   const {
     country,
-    intro,
-    institutionName,
-    institutionAbout,
-    findings,
+    about,
+    introduction,
+    contribution,
+    institution,
+    image
   } = props.pageContext
 
   let page = useRef(null)
@@ -62,7 +64,7 @@ function Country(props) {
               textAlign: `center`,
               marginTop: `-.5rem`
             }}
-            >{institutionName}</p>
+            >{institution}</p>
             <div class="content-header">
               
 
@@ -93,13 +95,13 @@ function Country(props) {
 
             {subPage === 1 ? (
               <p className="para" ref={el => (para = el)}>
-             
-                {intro}
+            
+                {introduction}
               </p>
             ) : subPage === 2 ? (
-              <p className="para" ref={el => (para = el)}> {institutionAbout} </p>
+              <p className="para" ref={el => (para = el)}> {about} about us </p>
             ) : (
-              <p className="para" ref={el => (para = el)}> {findings} </p>
+              <p className="para" ref={el => (para = el)}> {contribution} </p>
             )}
           </div>
         </div>
