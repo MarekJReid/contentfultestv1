@@ -46,7 +46,9 @@ function Survey() {
                 arches into stiff sections.
               </p>
             </div>
-            <div className="survey-page-link-button"><p>Click here to visit our survey site</p></div>
+            <a href="https://www.efs-survey.com/uc/Uni_St_Gallen/27cd/" target="_blank" className="survey-page-link-button">
+            <div ><p>Click here to visit our survey site</p></div>
+            </a>
           </div>
         </div>
       </div>

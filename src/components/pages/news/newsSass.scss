@@ -1,7 +1,5 @@
 .news-constainer {
   height: 100%;
-
-width: 90%;
   display: flex;
 
   justify-items: center;
@@ -97,5 +95,40 @@ width: 90%;
 
 .news-article-container {
   margin: 17vh 20% 20rem 20%;
+}
+
+.news-landing-container {
+  width: 100%;
+  height: 100%;
+
+  .card {
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .card-img {
+      height: 100%;
+      width: 30rem;
+      background: teal;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .card-text {
+      width: 20rem;
+      height: 100%;
+      display: flex;
+      padding: 1rem;
+      flex-direction: column ;
+      h1, h2, h3, h4, h5{
+        margin: .3rem 0;
+      }
+      p {
+        margin-top: 0;
+      }
+    }
+  }
 }
   

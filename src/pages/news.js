@@ -7,7 +7,7 @@ import NewsLanding from "../components/pages/news/NewsLanding"
 
 const News = () => (
   <Layout>
-    <SEO title="reports" />
+    <SEO title="The Latest Hope Barometer News" />
     <NewsLanding />
   </Layout>
 )

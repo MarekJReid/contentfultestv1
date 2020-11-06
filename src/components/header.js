@@ -22,7 +22,7 @@ function Header() {
       clickMobileNavMenu(mobNavMenu, mobNavMenuClose, mobNavMenuLinks)
     }
   }
-console.log(mobileNavMenu)
+
   const cclickMobNavClose = () => {
     setMobileNavMenu(!mobileNavMenu)
     clickMobNavClose(mobNavMenu, mobNavMenuClose, mobNavMenuLinks)

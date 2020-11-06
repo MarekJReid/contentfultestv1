@@ -9,7 +9,7 @@ function Intro() {
 
     return (
         <div class="">
-<AboutSliders contentRight={true} />
+<AboutSliders contentRight={true} startNum={0} page="intro"/>
         </div>
     )
 }

@@ -10,11 +10,11 @@
   z-index: 1000;
 
   .modal-box {
-    position: absolute;
+    position: fixed;
     background: white;
     width: 90%;
     padding: .5rem;
-    box-shadow: 0 0.75rem 0.5rem -0.5rem rgba(rgb(212, 160, 109), 0.671);
+    box-shadow: 0 0.75rem 0.5rem -0.5rem rgba(rgb(218, 215, 213), 0.671);
     border-radius: 0.5rem;
 
     .close {
@@ -32,6 +32,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+ 
   @media (max-width: 600px) {
     padding: 2rem 1rem 3rem 1rem;
   }

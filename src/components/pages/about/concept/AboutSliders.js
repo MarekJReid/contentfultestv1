@@ -8,9 +8,9 @@ import PhotoBox from "./PhotoBox"
 
 let tl = new TimelineLite()
 
-function AboutSliders({ contentRight, startNum }) {
-  const [buttons, setButtons] = useState(true)
-  const [boxNum, setBoxNum] = useState(0)
+function AboutSliders({ contentRight, startNum, page }) {
+  const [buttons, setButtons] = useState(contentRight)
+  const [boxNum, setBoxNum] = useState(startNum)
 
   let picBox = useRef(null)
   let textBox = useRef(null)
@@ -39,12 +39,22 @@ function AboutSliders({ contentRight, startNum }) {
       )
     }
   }
-  
+
   const clickButtons = () => {
+
+ if (page = "intro")  { 
     setTimeout(() => {
       setButtons(!buttons)
       boxNum < 3 ? setBoxNum(boxNum + 1) : setBoxNum(0)
-    }, 1000)
+    }, 1000) } 
+    
+    if (page = "concept") {
+      setTimeout(() => {
+        setButtons(!buttons)
+        boxNum < 6  ? setBoxNum(boxNum + 1) : setBoxNum(4)
+        console.log('boob')
+      }, 1000)
+    }
     animations()
 
     

@@ -296,8 +296,6 @@ a {
   .author-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     width: 90%;
 
     @media (max-width: 600px) {
@@ -308,7 +306,7 @@ a {
 
     .author-container-pic {
       overflow: hidden;
-      width: 50%;
+      width: 47%;
       height: 80vh;
       display: flex;
       align-items: center;
@@ -332,7 +330,6 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      margin-bottom: 5rem;
       @media (max-width: 600px) {
     width: 100%;
    
@@ -367,6 +364,13 @@ a {
         margin: 0;
         padding: 0.25rem 1rem;
         opacity: 0;
+      }
+    }
+    .author-publications {
+      padding: 1rem 1rem 8vh 1rem;
+    
+      h4 {
+        margin-bottom: -.9rem;
       }
     }
   }

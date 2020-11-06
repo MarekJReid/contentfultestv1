@@ -1,21 +1,34 @@
 [
   {
     "id": 0,
-    "name": "bleepadaboobob",
-    "intro": "Cupidatat aliquip est dolore magna proident nisi cupidatat sit incididunt laboris tempor et. Mollit officia ut magna eiusmod ad magna. Esse velit velit laboris irure sit eiusmod nisi consequat eu aliqua eu incididunt excepteur sint. Consectetur id irure id amet proident id excepteur eiusmod nostrud est. Quis officia pariatur ad ullamco magna dolore velit ex ut ex cillum duis."
+    "name": "The Hope Barometer",
+    "intro": "What originally stared as an idea in 2009, has evolved into an international research program involving over 15 countries. The basic motivation for developing the ‘Hope-Barometer International Research Program' was responding to the impression that in Europe, the attention of the populous and mass media concerning the future was focused mainly on problems, risks, catastrophes, worries and fears rather than opportunity and potential."
   },
   {
     "id": 1,
 
-    "intro": "Box 2 est dolore magna proident nisi cupidatat sit incididunt laboris tempor et. Mollit officia ut magna eiusmod ad magna. Esse velit velit laboris irure sit eiusmod nisi consequat eu aliqua eu incididunt excepteur sint. Consectetur id irure id amet proident id excepteur eiusmod nostrud est. Quis officia pariatur ad ullamco magna dolore velit ex ut ex cillum duis "
+    "intro": "Since then, for more than 10 years, swissfuture, together with the University of St. Gallen, has been conducting the international survey in which thousands of people take part every year and take place in Switzerland, Germany, France, Czech Republic, Poland, Spain, India, Malta, Israel, South Africa and now, Australia."
   },
   {
     "id": 2,
     
-    "intro": "Box 3 aliquip est dolore magna proident nisi cupidatat sit incididunt laboris tempor et. Mollit officia ut magna eiusmod ad magna. Esse velit velit laboris irure sit eiusmod nisi consequat eu aliqua eu incididunt excepteur sint. Consectetur id irure id amet proident id excepteur eiusmod nostrud est. Quis officia pariatur ad ullamco magna dolore velit ex ut ex cillum duis."
+    "intro": "The project is a scientifically broad-based study of the hopes, desires and future expectations of the population designed to empirically investigate the fundamental aspects, condition and interrelations of a positive attitude toward the future and ultimately discuss the results in the public media and forums around the world. In addition to providing a wide same of research data it also maintains two fundamental goals. First it aims to make people aware of their own hopes, values and abilities. This also includes reflection on the most important personal sources of hope. Secondly, it aims to show through an in-depth analysis what it is worth hoping for, where one should place ones hopes and what more people can do to stay hopeful and lead a fulfilled and happy life."
   },
   {
     "id": 3,
-    "intro": "Box 4 aliquip est dolore magna proident nisi cupidatat sit incididunt laboris tempor et. Mollit officia ut magna eiusmod ad magna. Esse velit velit laboris irure sit eiusmod nisi consequat eu aliqua eu incididunt excepteur sint. Consectetur id irure id amet proident id excepteur eiusmod nostrud est. Quis officia pariatur ad ullamco magna dolore velit ex ut ex cillum duis."
-  }
+    "intro": "Outcomes of the research are regularly presented and discussed at International congress of the International Positive Psychology Association (IPPA) and European Conference of Positive Psychology (ECPP), Swiss Positive Psychology Association (SWIPPA) and the Institute of Psychology at the University of Bern (Switzerland)."
+  },
+  {
+    "id": 4,
+  "name": "The concept of Hope",
+  "intro": "The idea of ‘hope' has been considered and explored throughout history, dating right back to the time of Greek philosophy. It was then that Aristotle delivered the notion that 'even though not every hopeful person is courageous, every courageous person is hopeful.' This of course was one of many attempts to conceptualise and explore the notion of hope and has continued to be explored by philosophers, academics, psychologists, theologists and even sports professionals ever since."
+},
+{
+    "id": 5,
+  "intro": "A more contemporary view and one of the most recent and widely accepted definitions is that by American psychologist and professor Charles R. Snyder. Snyder defines and characterises hope as an individual mental willpower that is directed toward the fulfillment of personal goals supported by the determination and motivation to initiate and sustain actions driving them. This is combined with one's self-belief in their capabilities to manage obstacles and setbacks."
+},
+{
+    "id": 6,
+  "intro": "In acknowledging this description and definition it becomes clear there is true value in hope and what's more, past research studies have shown that hope is a significant predictor of psychological well-being, specifically in the areas of life satisfaction and happiness."
+}
 ]

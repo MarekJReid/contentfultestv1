@@ -1,34 +1,39 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, StaticQuery, graphql, Link } from "gatsby"
+import Img from 'gatsby-image'
 import "./card.scss"
 function NewsCards() {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          allContentfulNews {
-            edges {
-              node {
-                author
-                bodyNormal {
-                  bodyNormal
-                }
-                date
-                institution
-                newsTitle
-                subtitle
-                slug
-              }
+  const data = useStaticQuery(graphql`
+  query newsCards {
+      allContentfulNews(sort: {fields: date, order: DESC}) {
+        edges {
+          node {
+            date(formatString: "dddd MMMM Do, YYYY")
+            author
+            bodyNormal {
+              bodyNormal
             }
+            image1 { 
+                fluid(maxWidth: 980) {
+                  ...GatsbyContentfulFluid
+                }
+           } 
+            newsTitle
+            
           }
         }
-      `}
-      render={data => (
+      }
+    }
+  `)
+  console.log(data.allContentfulNews.edges[0].node.image1.fluid)
+  return ( 
+     
         <div className="news-grid">
+      
           {data.allContentfulNews.edges.map(article => (
             <div className="news-card">
               <div className="news-card-pic">
-                <img src={`https://picsum.photos/id/1052/300`} alt="" />
+              <Img fluid={article.node.image1.fluid} style={{minHeight: `100%`}}/>
               </div>
               <div className="news-card-text">
                 <h1>{article.node.newsTitle}</h1>
@@ -39,12 +44,15 @@ function NewsCards() {
                 <div className="news-card-author-info">
                   <span> {article.node.institution}</span>
                 </div>
+                <div className="news-card-author-info">
+                  <span> {article.node.date}</span>
+                </div>
                 <div className="news-intro">
-                  {article.node.bodyNormal.bodyNormal.slice(0, 200)} ...
+                {article.node.bodyNormal.bodyNormal.slice(0, 250)} ..
                 </div>
                 <div className="button-box">
-                <Link to={`/news/${article.node.slug}`}>
-                  <div className="btn-big">
+                <Link to={`/news/${article.node.newsTitle.replace(/\s+/g, '-').toLowerCase()}`}>
+                  <div className="btn-med" style={{padding: `1rem 3rem`}}>
                     <p>
                      Read More
                     </p>
@@ -55,8 +63,9 @@ function NewsCards() {
             </div>
           ))}
         </div>
-      )}
-    />
+     
+    
   )
+
 }
 export default NewsCards

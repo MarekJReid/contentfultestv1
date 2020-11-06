@@ -1,36 +1,71 @@
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
     
     const newsData = await graphql(`
-    query {
-      allContentfulNews {
+    query newsArticle {
+      allContentfulNews(sort: {fields: date, order: DESC}) {
         edges {
           node {
-            slug
+            date(formatString: "dddd MMMM Do, YYYY")
             author
             bodyNormal {
               bodyNormal
             }
-            date
-            institution
+            image1 {
+              fluid(maxWidth: 980) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+              }
+            }
+            image2 {
+              fluid(maxWidth: 980) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+              }
+            }
+            image3 {
+              fluid(maxWidth: 980) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+              }
+            }
             newsTitle
+            bodyNormal2 {
+              bodyNormal2
+            }
+            bodyNormal3 {
+              bodyNormal3
+            }
             subtitle
+            institution
           }
         }
       }
     }
+    
     `)
     const ArticleTemplate = require.resolve("./src/components/templates/news/ArticleTemplate.js")
    
     newsData.data.allContentfulNews.edges.forEach(edge => {
       createPage({
-        path: `/news/${edge.node.slug}/`,
+        path: `/news/${edge.node.newsTitle.replace(/\s+/g, '-').toLowerCase()}/`,
         component: ArticleTemplate,
         context: {
           author: edge.node.author,
           title: edge.node.newsTitle,
           subtitle: edge.node.subtitle,
           date: edge.node.date,
-          body: edge.node.bodyNormal.bodyNormal
+          body1: edge.node.bodyNormal,
+          body2: edge.node.bodyNormal2,
+          body3: edge.node.bodyNormal3,
+          image1: edge.node.image1,
+          image2: edge.node.image2,
+          image3: edge.node.image3
         },
       })
     })

@@ -24,7 +24,7 @@ if (id) {TweenLite.to(fade, 3, {autoAlpha: 1, })}
         <div 
       class= { id === 1 || id === 3 || titleAlign === 1 ? "titles-right" : "" }
       >
-      <h1>{name}</h1> <h3> I am a sub heading </h3>
+      <h1>{name}</h1> 
       </div>
       ) : null}
       

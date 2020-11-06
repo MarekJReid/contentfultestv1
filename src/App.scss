@@ -86,7 +86,7 @@ span {
 }
 
 .btn-med {
-  width: 53%;
+
   color: #535353;
   display: flex;
   flex-flow: column;
@@ -284,6 +284,7 @@ span {
       padding-left: 1rem;
 
       h1 {
+        margin-left: -3rem;
         margin-bottom: 1rem !important;
         background: white;
         padding: 1rem;
