@@ -85,6 +85,7 @@
         .button-box {
           display: flex;
           justify-content: center;
+          padding-bottom: 5rem;
         }
       }
     }
@@ -100,7 +101,7 @@
   .article-container {
     width: 70vw;
     .text-section {
-      padding: 1rem;
+      padding: 1.5rem;
       
     }
     @media (max-width: 600px) {

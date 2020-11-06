@@ -10,7 +10,7 @@
       width: 23rem;
       margin: 1rem;
       display: flex;
-      height: 100%;
+      
       overflow: hidden;
       flex-flow: row wrap;
       box-shadow: 3px 7px 52px -12px rgba(0, 0, 0, 0.37);
@@ -73,6 +73,7 @@
         width: 100%;
         flex-flow: row;
         justify-content: center;
+        padding-bottom: 5rem;
         .news-card-button {
           padding: 1rem 3rem;
           border-radius: 3px;
