@@ -17,60 +17,59 @@ function Article(props) {
     image3,
   } = props.pageContext
 
-  
-
   return (
     <Layout>
       <div class="news-article-container">
         <div class="article-container">
-          <div class="heading-section">
-            <div
-              class="hello"
-              style={{ height: `60vh`, width: `100%`, position: `relative` }}
-            >
-              <Img fluid={image1.fluid} style={{ position: `absoloute` }} />
-            </div>
-          </div>
-          <h1>{title}</h1>
-          <h3>{subtitle}</h3>
-          <h4
-            style={{
-              display: `inline`,
-              fontSize: `110%`,
-            }}
+          <div
+            class="article-image1"
+            style={{ height: `60vh`, width: `100%`, position: `relative` }}
           >
-            Author
+            <Img fluid={image1.fluid} style={{ position: `absoloute` }} />
+          </div>
+          <div class="text-section">
+            <h1>{title}</h1>
+            <h3>{subtitle}</h3>
+            <h4
+              style={{
+                display: `inline`,
+                fontSize: `110%`,
+              }}
+            >
+              Author
+              <p>
+                <strong>{author}</strong>
+              </p>
+            </h4>
+
             <p>
-              <strong>{author}</strong>
+              <strong>Date Written:</strong> {date}
             </p>
-          </h4>
-        </div>
-        <p>
-          <strong>Date Written:</strong> {date}
-        </p>
-        <div class="p">
-          <p>{body1.bodyNormal}</p>
-        </div>
-        <div
-              class="hello"
-              style={{ height: `60vh`, width: `100%`, position: `relative` }}
-            >
-              <Img fluid={image2.fluid} style={{ position: `absoloute` }} />
-            </div>
-         
-            <div class="p">
+
+            <p>{body1.bodyNormal}</p>
+          </div>
+          <div
+            class="hello"
+            style={{ height: `60vh`, width: `100%`, position: `relative` }}
+          >
+            <Img fluid={image2.fluid} style={{ position: `absoloute` }} />
+          </div>
+          <div class="text-section">
             <p>{body2.bodyNormal2}</p>
+          </div>
+          <div
+          class="hello"
+          style={{ height: `60vh`, width: `100%`, position: `relative` }}
+        >
+          <Img fluid={image3.fluid} style={{ position: `absoloute` }} />
         </div>
-        <div
-              class="hello"
-              style={{ height: `60vh`, width: `100%`, position: `relative` }}
-            >
-              <Img fluid={image3.fluid} style={{ position: `absoloute` }} />
-            </div>
-         
-            <div class="p">
-            <p>{body3.bodyNormal3}</p>
+
+        <div class="text-section">
+          <p>{body3.bodyNormal3}</p>
         </div>
+        </div>
+
+       
         <p>
           <Link
             to="/news"

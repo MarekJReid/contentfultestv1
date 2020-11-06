@@ -26,16 +26,15 @@ function PartnersLanding(props) {
       <div class="partners-container" ref={el => (page = el)}>
         <div class="partners-intro-box">
           <div class="intro-box-text">
-            <h1>I m the intro box</h1>
+            <h1>Our Distinguished Partners</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit aliquid hic architecto consectetur ratione
-              voluptatem distinctio quis soluta expedita ex, cumque minima quas
-              inventore unde nostrum laudantium sequi corrupti tempore.
+              Our partners in instution and coutnry are the foundations of our study. 
+              Without them, the breadth of our research would be severly limited. We invite you to
+              delve into how they are commited to serving the purpose of this vital research.
             </p>
             <div class="box-h3-menu">
              
-              <h3>I am the sentance to call the peeops to select a country</h3>
+              <h3>Find out more about who they are below</h3>
               <DropDownMenu />
             </div>
           </div>
