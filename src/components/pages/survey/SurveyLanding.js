@@ -1,7 +1,34 @@
 import React, {useRef, useEffect} from "react";
 import {gsap} from 'gsap'
 import "./survey.scss";
-function Survey() {
+import bg from  '../../../images/hero-landing.jpg'
+import { graphql, useStaticQuery } from "gatsby";
+import Img from 'gatsby-image'
+
+function Survey(props) {
+
+  const data = useStaticQuery( graphql`
+  query SurveyImage {
+    file(relativePath: {eq: "hero-landing.jpg"}) {
+      id
+      childImageSharp {
+        fluid(maxHeight: 300) {
+          base64
+          tracedSVG
+          srcWebp
+          srcSetWebp
+          originalImg
+          originalName
+        }
+      }
+    }
+  }
+  
+  
+
+`)
+
+console.log(data.file.childImageSharp.fluid)
 
     let pic = useRef(null)
     let textBox = useRef(null)
@@ -14,18 +41,17 @@ function Survey() {
     })
   return (
     <div
-      style={{
-        height: `90vh`,
-        marginTop: `10vh`,
-        display: `flex`,
-        justifyContent: `center`,
-        justifyItems: `center`
-      }}
+      className="survey-page"
     >
       <div className="survey-page-container">
       <div className="survey-page-image">
-            <img src={`https://picsum.photos/id/177/1000/250`} alt="" ref={(el) => (pic = el)} />
-          </div>
+
+           
+            <Img fluid={data.file.childImageSharp.fluid}  style={{zIndex: `-1`, minHeight: `100vh`}} ref={(el) => (pic = el)} />
+
+            </div>
+            
+        
         <div className="survey-page-section">
           
           <div className="survey-page-intro-box" ref={(el) => (textBox = el)}>
@@ -34,16 +60,7 @@ function Survey() {
             </div>
             <div className="survey-page-intro-box-para">
               <p>
-                One morning, when Gregor Samsa woke from troubled dreams, he
-                found himself transformed in his bed into a horrible vermin. He
-                lay on his armour-like back, and if he lifted his head a little
-                he could see his brown belly, slightly domed and divided by
-                arches into stiff sections.
-                One morning, when Gregor Samsa woke from troubled dreams, he
-                found himself transformed in his bed into a horrible vermin. He
-                lay on his armour-like back, and if he lifted his head a little
-                he could see his brown belly, slightly domed and divided by
-                arches into stiff sections.
+                We would like to invite you to participate in the 2020 survey of hope. With a specific focus on the current climate regarding the pandemic we as humanity are facing and its subsequent challenges.
               </p>
             </div>
             <a href="https://www.efs-survey.com/uc/Uni_St_Gallen/27cd/" target="_blank" className="survey-page-link-button">
@@ -57,3 +74,7 @@ function Survey() {
 }
 
 export default Survey;
+
+
+
+

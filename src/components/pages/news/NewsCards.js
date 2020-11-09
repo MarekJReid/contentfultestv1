@@ -1,8 +1,15 @@
-import React from "react"
-import { useStaticQuery, StaticQuery, graphql, Link } from "gatsby"
+import React, {useRef, useEffect} from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import {TweenLite} from 'gsap'
 import Img from 'gatsby-image'
 import "./card.scss"
 function NewsCards() {
+  let card = useRef(null)
+
+  useEffect(() => {
+    TweenLite.fromTo(card, .5, {y: "-10vh", autoAlpha: 0}, {y: 0, autoAlpha: 1} )
+  })
+
   const data = useStaticQuery(graphql`
   query newsCards {
       allContentfulNews(sort: {fields: date, order: DESC}) {
@@ -25,13 +32,13 @@ function NewsCards() {
       }
     }
   `)
-  console.log(data.allContentfulNews.edges[0].node.image1.fluid)
+ 
   return ( 
      
         <div className="news-grid">
       
           {data.allContentfulNews.edges.map(article => (
-            <div className="news-card">
+            <div className="news-card" ref={el => (card = el)}>
               <div className="news-card-pic">
               <Img fluid={article.node.image1.fluid} style={{minHeight: `100%`}}/>
               </div>

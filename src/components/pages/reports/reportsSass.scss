@@ -4,7 +4,11 @@
 
   display: flex;
 
-  justify-items: center;
+  @media (max-width: 900px) {
+    width: 90%;
+  } 
+
+  justify-content: center;
   flex-flow: row wrap;
   .reports-intro-box {
     display: flex;

@@ -13,14 +13,12 @@ function NewsLanding() {
       <div className="news-constainer">
         <div className="news-intro-box">
           <div className="news-title">
-            <h1> You should read all of our newss </h1>
+            <h1> Stay up to date with all the latest Hope Barometer News.</h1>
           </div>
 
           <div className="news-para">
             <p>
-              Ducks. There how preparation such are the to the luxury discharge
-              and my cons, refute. What cache a following the do and its
-              continued then it was have frequency of in which, good to parks.
+              Browse below for all of the latests updates and happenings around our survey. 
             </p>
           </div>
         </div>

@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from "react"
 import { TimelineLite, TweenLite, gsap } from "gsap"
+import Img from 'gatsby-image'
 
 import "../../pages/partners/partners.scss"
-import pic from "../../../images/partners/countries/countriesEg.jpg"
+
 
 import Layout from "../../layout"
 let tl = new TimelineLite()
@@ -54,7 +55,7 @@ function Country(props) {
       <div class="country-page">
         <div class="country-wrapper">
           <div class="country-container-pic">
-            <img src={pic} alt="" ref={el => (img = el)} />
+           <Img fluid={image.fluid} key={image.src} />
           </div>
           <div class="country-container-text">
             <h1 ref={el => (heading = el)}>{country}</h1>

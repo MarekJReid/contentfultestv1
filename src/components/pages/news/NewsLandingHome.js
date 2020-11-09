@@ -61,10 +61,10 @@ function NewsLandingHome() {
         justifyContent: `center`,
       }}
     >
-      <div className="news-constainer" ref={el => (container = el)}>
-        <div className="news-intro-box" style={{textAlign: `center`, width: `100%`, paddingBottom: `5vh`}}>
+      <div className="news-constainer" ref={el => (container = el)} >
+        <div className="news-intro-box" style={{textAlign: `center`, width: `100%`, padding: `0 0 5vh 0`}}>
           <div className="news-title">
-            <h1 style={{fontSize: `325%`, paddingBottom: `5vh`, paddingTop: `10rem`}}> The Latest in Hope Barometer News </h1>
+            <h1 style={{fontSize: `325%`, paddingTop: `10rem`}}> The Latest in Hope Barometer News </h1>
           </div>
         </div>
         <div class="news-landing-container">

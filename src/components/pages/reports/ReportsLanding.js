@@ -51,13 +51,11 @@ function ReportsLanding() {
             <h1>Hope Barometer Reports</h1>
           </div>
           <div className="reports-subtitle">
-            <h3>You should read all of our reports</h3>
+            <h3>Hope Barometer Reports</h3>
           </div>
           <div className="reports-para">
             <p>
-              Ducks. There how preparation such are the to the luxury discharge
-              and my cons, refute. What cache a following the do and its
-              continued then it was have frequency of in which, good to parks.
+              Here you will find reference to past years surveys and findings thereof. We invite you to read the reports and findings from other countries also over in our Partners section of the website.
             </p> 
           </div>
         </div>
@@ -81,7 +79,7 @@ function ReportsLanding() {
                   <div className="reports-card-author-info">
                     <span> {item.authorInfo}</span>
                   </div>
-                  <div className="reports-intro"><p>{item.para.slice(0, 250)} ...</p></div>
+                  <div className="reports-intro"><p>{item.para.slice(0, 250)}</p></div>
                 <div class="button-container">
                 <div className="btn-disabled">
                    
