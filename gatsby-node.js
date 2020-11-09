@@ -11,7 +11,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
               bodyNormal
             }
             author
-            date
+            date(formatString: "dddd MMMM Do, YYYY")
             institution
             newsTitle
             image1 {
@@ -41,11 +41,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           subtitle: edge.node.subtitle,
           date: edge.node.date,
           body1: edge.node.bodyNormal,
-          // body2: edge.node.bodyNormal2,
-          // body3: edge.node.bodyNormal3,
+          body2: edge.node.bodyNormal2,
+          body3: edge.node.bodyNormal3,
           image1: edge.node.image1,
-          // image2: edge.node.image2,
-          // image3: edge.node.image3
+          image2: edge.node.image2,
+          image3: edge.node.image3
         },
       })
     })

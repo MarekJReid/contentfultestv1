@@ -48,25 +48,32 @@ function Article(props) {
 
             <p>{body1.bodyNormal}</p>
           </div>
-          <div
-            class="hello"
-            style={{ height: `60vh`, width: `100%`, position: `relative` }}
-          >
-            {/* <Img fluid={image2.fluid} style={{ position: `absoloute` }} /> */}
-          </div>
-          <div class="text-section">
-            {/* <p>{body2.bodyNormal2}</p> */}
-          </div>
-          <div
-            class="hello"
-            style={{ height: `60vh`, width: `100%`, position: `relative` }}
-          >
-            {/* <Img fluid={image3.fluid} style={{ position: `absoloute` }} /> */}
-          </div>
-
-          <div class="text-section">
-            {/* <p>{body3.bodyNormal3}</p> */}
-          </div>
+          {image2 ? (
+            <div
+              class="hello"
+              style={{ height: `60vh`, width: `100%`, position: `relative` }}
+            >
+              <Img fluid={image2.fluid} style={{ position: `absoloute` }} />
+            </div>
+          ) : null}
+          {body2 ? (
+            <div class="text-section">
+              <p>{body2.bodyNormal2}</p>
+            </div>
+          ) : null}
+          {image3 ? (
+            <div
+              class="hello"
+              style={{ height: `60vh`, width: `100%`, position: `relative` }}
+            >
+              <Img fluid={image3.fluid} style={{ position: `absoloute` }} />
+            </div>
+          ) : null}
+          {body3 ? (
+            <div class="text-section">
+              <p>{body3.bodyNormal3}</p>
+            </div>
+          ) : null}
         </div>
 
         <p>
