@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
-import { TimelineLite, TweenLite, gsap } from "gsap"
 import Img from "gatsby-image"
+import { TimelineLite, TweenLite, gsap } from "gsap"
+import DOMPurify from "dompurify"
 
 import "../../pages/partners/partners.scss"
 
@@ -9,6 +10,7 @@ let tl = new TimelineLite()
 
 function Country(props) {
   const [subPage, setSubPage] = useState(1)
+
   const {
     country,
     about,
@@ -16,8 +18,24 @@ function Country(props) {
     contribution,
     institution,
     image,
+    data,
   } = props.pageContext
 
+  const sanitizedIntroduction = DOMPurify.sanitize(introduction)
+  const sanitizedAbout = DOMPurify.sanitize(about)
+  const sanitizedContribition = DOMPurify.sanitize(contribution)
+
+  function introductionMarkup() {
+    return { __html: sanitizedIntroduction }
+  }
+  function aboutMarkup() {
+    return { __html: sanitizedAbout }
+  }
+  function contribitionMarkup() {
+    return { __html: sanitizedContribition }
+  }
+
+  console.log(introduction, data)
   let page = useRef(null)
   let img = useRef(null)
   let heading = useRef(null)
@@ -47,13 +65,17 @@ function Country(props) {
     )
     gsap.from(nav, 1, { autoAlpha: 0 })
   })
-  console.log(image.fluid)
+
   return (
     <Layout>
       <div class="country-page">
         <div class="country-wrapper">
           <div class="country-container-pic" ref={el => (img = el)}>
-            <Img fluid={image.fluid} alt="" style={{position: `relative`, height: `100vh`, width: `100vw`}} />
+            <Img
+              fluid={image.fluid}
+              alt=""
+              style={{ position: `relative`, height: `70vh`, width: `100vw` }}
+            />
           </div>
           <div class="country-container-text">
             <h1 ref={el => (heading = el)}>{country}</h1>
@@ -95,19 +117,19 @@ function Country(props) {
             </div>
 
             {subPage === 1 ? (
-              <p className="para" ref={el => (para = el)}>
-                {introduction}
-              </p>
+              <p
+                className="para"
+                ref={el => (para = el)}
+                dangerouslySetInnerHTML={introductionMarkup()}
+              ></p>
             ) : subPage === 2 ? (
-              <p className="para" ref={el => (para = el)}>
-                {" "}
-                {about} about us{" "}
-              </p>
+              <p className="para" ref={el => (para = el)}
+              dangerouslySetInnerHTML={aboutMarkup()}
+              ></p>
             ) : (
-              <p className="para" ref={el => (para = el)}>
-                {" "}
-                {contribution}{" "}
-              </p>
+              <p className="para" ref={el => (para = el)}
+              dangerouslySetInnerHTML={contribitionMarkup()}
+              ></p>
             )}
           </div>
         </div>

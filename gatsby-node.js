@@ -58,14 +58,20 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           node {
             country
             institution
-            contribution {
-              contribution
+            childContentfulCountryDetailsAboutRichTextNode {
+              childContentfulRichText {
+                html
+              }
             }
-            introduction {
-              introduction
+            childContentfulCountryDetailsContributionRichTextNode {
+              childContentfulRichText {
+                html
+              }
             }
-            about {
-              about
+            childContentfulCountryDetailsIntroductionRichTextNode {
+              childContentfulRichText {
+                html
+              }
             }
             image {
               fluid(maxWidth: 1000) {
@@ -90,9 +96,10 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       context: {
         country: edge.node.country,
         institution: edge.node.institution.institution,
-        introduction: edge.node.introduction.introduction,
-        contribution: edge.node.contribution.contribution,
-        about: edge.node.about.about,
+        data: edge.node,
+        introduction: edge.node.childContentfulCountryDetailsIntroductionRichTextNode.childContentfulRichText.html,
+        contribution: edge.node.childContentfulCountryDetailsContributionRichTextNode.childContentfulRichText.html,
+        about: edge.node.childContentfulCountryDetailsAboutRichTextNode.childContentfulRichText.html,
         image: edge.node.image
          },
     })

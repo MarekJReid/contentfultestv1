@@ -1,9 +1,9 @@
 import React from "react"
 import AboutLanding from "../components/pages/about/nav/AboutLanding"
-function About({ children }) {
+function About({ location }) {
   return (
     <div class="">
-      <AboutLanding> i am the about page</AboutLanding>
+      <AboutLanding location={location}> i am the about page</AboutLanding>
     </div>
   )
 }

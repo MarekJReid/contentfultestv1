@@ -20,6 +20,7 @@ function RichTextTest() {
       }
       
   `)
+  
   const display = data.allContentfulTest.edges[0].node.childContentfulTestRtfRichTextNode.childContentfulRichText.html
   const sanitizedDisplay = DOMPurify.sanitize(display)
   function createMarkup() {

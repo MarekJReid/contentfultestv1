@@ -52,7 +52,7 @@ function Author() {
           </div>
           <div class="author-publications">
           <h2>Featured Publications</h2>
-          <h4>* Krafft, A. M., Martin-Krumm, C., & Fenouillet, F. (2019).</h4>
+          <h4>Krafft, A. M., Martin-Krumm, C., & Fenouillet, F. (2019).</h4>
           <p>Adaptation, further elaboration, and validation of a scale to measure hope as perceived by people: Discriminant value and predictive utility vis-à-vis dispositional hope. Assessment, 26(8), 1594-1609.</p>
           <h4>Krafft, A. M., Perrig-Chiello, P., & Walker, A. M. (Eds.). (2018).</h4>
           <p> Hope for a Good Life: Results of the Hope-Barometer International Research Program (Vol. 72). Springer.</p>

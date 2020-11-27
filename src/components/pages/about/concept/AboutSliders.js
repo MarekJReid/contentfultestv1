@@ -52,7 +52,6 @@ function AboutSliders({ contentRight, startNum, page }) {
       setTimeout(() => {
         setButtons(!buttons)
         boxNum < 6  ? setBoxNum(boxNum + 1) : setBoxNum(4)
-        console.log('boob')
       }, 1000)
     }
     animations()
@@ -111,16 +110,16 @@ function AboutSliders({ contentRight, startNum, page }) {
             >
               {boxNum > 0 ? (
                 <span>
-                  <span class="prev" onClick={previousClickButtons}>
+                  <span class="button" onClick={previousClickButtons}>
                     Previous
                   </span>
-                  <span class="middle"> / </span>
+                  <span class="middle" style={{minWidth: `10rem`}}> &nbsp; &nbsp; &nbsp;  </span>
                 </span>
               ) : null}
 
               <span>
-                <span class="next" onClick={clickButtons}>
-                  &nbsp; Next
+                <span class="button" onClick={clickButtons}>
+                  Next
                 </span>
               </span>
             </div>
