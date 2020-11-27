@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import Img from "gatsby-image"
 import { TimelineLite, TweenLite, gsap } from "gsap"
-import DOMPurify from "dompurify"
+// import DOMPurify from "dompurify"
 
 import "../../pages/partners/partners.scss"
 
@@ -21,18 +21,18 @@ function Country(props) {
     data,
   } = props.pageContext
 
-  const sanitizedIntroduction = DOMPurify.sanitize(introduction)
-  const sanitizedAbout = DOMPurify.sanitize(about)
-  const sanitizedContribition = DOMPurify.sanitize(contribution)
+  // const sanitizedIntroduction = DOMPurify.sanitize(introduction)
+  // const sanitizedAbout = DOMPurify.sanitize(about)
+  // const sanitizedContribition = DOMPurify.sanitize(contribution)
 
   function introductionMarkup() {
-    return { __html: sanitizedIntroduction }
+    return { __html: introduction }
   }
   function aboutMarkup() {
-    return { __html: sanitizedAbout }
+    return { __html: about }
   }
   function contribitionMarkup() {
-    return { __html: sanitizedContribition }
+    return { __html: contribution }
   }
 
   console.log(introduction, data)

@@ -127,7 +127,7 @@ li {
     .country-container-pic {
       overflow: hidden;
       min-width: 20rem;
-     
+     min-height: 100vh;
 
       display: flex;
       flex: 1;
@@ -215,6 +215,7 @@ li {
 
       .para {
         padding: 0 1rem;
+        font-size: 80%;
       }
     }
   }
