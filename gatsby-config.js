@@ -8,7 +8,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    
+    `@contentful/gatsby-transformer-contentful-richtext`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,7 +17,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

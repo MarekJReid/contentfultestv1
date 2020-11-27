@@ -1,15 +1,13 @@
 import React, { useRef, useEffect, useState } from "react"
 import { TimelineLite, TweenLite, gsap } from "gsap"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 
 import "../../pages/partners/partners.scss"
-
 
 import Layout from "../../layout"
 let tl = new TimelineLite()
 
 function Country(props) {
-  console.log(props)
   const [subPage, setSubPage] = useState(1)
   const {
     country,
@@ -17,7 +15,7 @@ function Country(props) {
     introduction,
     contribution,
     institution,
-    image
+    image,
   } = props.pageContext
 
   let page = useRef(null)
@@ -49,31 +47,33 @@ function Country(props) {
     )
     gsap.from(nav, 1, { autoAlpha: 0 })
   })
-
+  console.log(image.fluid)
   return (
     <Layout>
       <div class="country-page">
         <div class="country-wrapper">
-          <div class="country-container-pic">
-           <Img fluid={image.fluid} key={image.src} />
+          <div class="country-container-pic" ref={el => (img = el)}>
+            <Img fluid={image.fluid} alt="" style={{position: `relative`, height: `100vh`, width: `100vw`}} />
           </div>
           <div class="country-container-text">
             <h1 ref={el => (heading = el)}>{country}</h1>
-            <p className="institution" ref={el => (qauls = el)}
-            
-            style={{
-              textAlign: `center`,
-              marginTop: `-.5rem`
-            }}
-            >{institution}</p>
+            <p
+              className="institution"
+              ref={el => (qauls = el)}
+              style={{
+                textAlign: `center`,
+                marginTop: `-.5rem`,
+              }}
+            >
+              {institution}
+            </p>
             <div class="content-header">
-              
-
               <nav>
-                <ul ref={el => (nav = el)}
-                style={{
-                  paddingBottom: `.5rem`
-                }}
+                <ul
+                  ref={el => (nav = el)}
+                  style={{
+                    paddingBottom: `.5rem`,
+                  }}
                 >
                   <li onClick={() => setSubPage(1)}>
                     <span className={subPage === 1 ? "active" : ""}>
@@ -96,13 +96,18 @@ function Country(props) {
 
             {subPage === 1 ? (
               <p className="para" ref={el => (para = el)}>
-            
                 {introduction}
               </p>
             ) : subPage === 2 ? (
-              <p className="para" ref={el => (para = el)}> {about} about us </p>
+              <p className="para" ref={el => (para = el)}>
+                {" "}
+                {about} about us{" "}
+              </p>
             ) : (
-              <p className="para" ref={el => (para = el)}> {contribution} </p>
+              <p className="para" ref={el => (para = el)}>
+                {" "}
+                {contribution}{" "}
+              </p>
             )}
           </div>
         </div>
