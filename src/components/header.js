@@ -31,11 +31,11 @@ function Header() {
   return (
     <div class="">
      {/* Mobile Nav */}
-      <div className="mobile-nav-box">
+      <div className="mobile-nav-box" style={{display: `flex`, justifyContent: `center`}}>
       
           
         <h1 >
-          <Link to="/" style={{ color: `yellow`, fontFamily:"GothamPro" }}> The Hope Barometer </Link>
+          <Link to="/" style={{ color: `yellow`, fontFamily:"GothamPro", fontSize: `90%`}}> The Hope Barometer </Link>
         </h1>
         <div className="" onClick={cclickMobileNavMenu}>
           <div class="">
@@ -44,7 +44,6 @@ function Header() {
                 color: `yellow`,
                 fontSize: `300%`,
                 marginTop: `-.42rem`,
-                paddingRight: `1.5rem`,
               }}
             >
               {" "}
@@ -57,7 +56,7 @@ function Header() {
                 <h5
                   style={{
                     color: `yellow`,
-                    fontSize: `300%`,
+                    fontSize: `200%`,
                     marginTop: `.2rem`,
                     marginBottom: `-.5rem`,
                     paddingLeft: `.5rem`,
@@ -69,7 +68,7 @@ function Header() {
                 <h5
                   style={{
                     color: `yellow`,
-                    fontSize: `300%`,
+                    fontSize: `200%`,
                     margin: `0`,
                     paddingLeft: `7rem`,
                   }}

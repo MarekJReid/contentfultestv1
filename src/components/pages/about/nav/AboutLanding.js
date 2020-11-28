@@ -13,8 +13,8 @@ function AboutLanding(props) {
           <nav className="about-page-nav">
             <ul>
               <li><Link to="/about">  <span className={props.location.pathname === '/about' ? 'active' : ''}> Introduction</span> </Link></li>
-              <li><Link to="/about/concept" className={props.location.pathname === '/about/concept' ? 'active' : ''}>  <span> Concept </span> </Link></li>
-              <li><Link to="/about/author" className={props.location.pathname === '/about/author' ? 'active' : ''}>  <span> Author </span> </Link></li>
+              <li><Link to="/about/concept" >  <span className={props.location.pathname === '/about/concept' ? 'active' : ''}> Concept </span> </Link></li>
+              <li><Link to="/about/author" >  <span className={props.location.pathname === '/about/author' ? 'active' : ''}> Author </span> </Link></li>
               <li><Link to="/partners">  <span> Partners </span> </Link></li>
             </ul>  
           </nav>

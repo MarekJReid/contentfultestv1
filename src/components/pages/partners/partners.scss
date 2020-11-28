@@ -137,11 +137,12 @@ li {
       @media (min-width: 600px) and (max-width: 990px) {
         min-width: 100vw;
       }
-      @media (min-width: 600) {
-        height: 80vh;
+      @media (max-width: 600px) {
+       min-height: 10px;
+      //  max-height: 10px;
       }
       .country-img {
-        
+        min-height: 100vh;
     
         opacity: 0;
       }
@@ -151,6 +152,15 @@ li {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      @media (min-width: 600px) and (max-width: 990px) {
+        min-width: 100%;
+        padding: .5rem;
+      }
+      @media (max-width: 600px) {
+        margin: 0;
+        width: 100%;
+        padding: .5rem;
+      }
       h1 {
         padding: 1rem;
         background: white;
@@ -160,6 +170,10 @@ li {
         @media (max-width: 600px) {
           margin: 0;
           text-align: center;
+          padding: .5rem;
+        }
+        @media (min-width: 600px) and (max-width: 990px) {
+          margin: 0;
         }
       }
 
@@ -184,20 +198,21 @@ li {
       }
       .content-header {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: -1rem;
 
         nav {
           margin-top: -0.5rem;
-          padding-right: 2rem;
+          // padding-right: 2rem;
           ul {
             list-style: none;
             margin: 0;
+            padding: 0;
             li {
               display: inline;
-              padding: 0 1rem;
+              padding: 0 .4rem;
               transition: all 0.2s ease-in-out;
-              font-size: 150%;
+              font-size: 120%;
               .active {
                 border-bottom: 1px solid black;
               }
@@ -216,7 +231,8 @@ li {
 
       .para {
         padding: 0 1rem;
-        font-size: 80%;
+        font-size: 110%;
+        margin: 0;
       }
     }
   }

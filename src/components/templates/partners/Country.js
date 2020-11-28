@@ -35,7 +35,7 @@ function Country(props) {
     return { __html: contribution }
   }
 
-  console.log(introduction, data)
+  console.log(introductionMarkup())
   let page = useRef(null)
   let img = useRef(null)
   let heading = useRef(null)
@@ -74,7 +74,7 @@ function Country(props) {
             <Img
               fluid={image.fluid}
               alt=""
-              style={{ position: `relative`, height: `70vh`, width: `100vw` }}
+              style={{ position: `relative`, height: `100vh`, width: `100vw` }}
             />
           </div>
           <div class="country-container-text">
@@ -99,12 +99,12 @@ function Country(props) {
                 >
                   <li onClick={() => setSubPage(1)}>
                     <span className={subPage === 1 ? "active" : ""}>
-                      Introduction
+                      Introduction 
                     </span>
                   </li>
                   <li onClick={() => setSubPage(2)}>
                     <span className={subPage === 2 ? "active" : ""}>
-                      Institution
+                      Institution 
                     </span>
                   </li>
                   <li onClick={() => setSubPage(3)}>
